@@ -759,6 +759,14 @@
 .has-bg-video .hero-content {
     z-index: 3;
 }
+.has-bg-video .hero-title,
+.has-bg-video .hero-stat-value {
+    color: var(--text-inverse);
+}
+.has-bg-video .hero-description,
+.has-bg-video .hero-stat-label {
+    color: rgba(255, 255, 255, 0.8);
+}
 
 /* ---------- Testimonials ---------- */
 .testimonial-grid {
