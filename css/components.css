@@ -251,6 +251,7 @@
     display: flex;
     align-items: center;
     gap: var(--space-3);
+    font-size: var(--text-sm);
 }
 .floating-card-icon {
     width: 40px;
@@ -725,14 +726,14 @@
 .bg-video-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.72) 0%, rgba(240,245,255,0.75) 50%, rgba(255,255,255,0.72) 100%);
+    background: rgba(255,255,255,0.45);
     z-index: 1;
 }
 .bg-video-overlay-light {
-    background: linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(245,248,255,0.85) 50%, rgba(255,255,255,0.82) 100%);
+    background: rgba(255,255,255,0.55);
 }
 .bg-video-overlay-dark {
-    background: linear-gradient(135deg, rgba(15,23,42,0.82) 0%, rgba(30,41,59,0.85) 50%, rgba(15,23,42,0.82) 100%);
+    background: rgba(15,23,42,0.65);
 }
 .has-bg-video > .container,
 .has-bg-video > .stats-grid,
