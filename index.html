@@ -75,20 +75,32 @@
     </nav>
 
     <main>
-        <!-- Hero Section with Background Video -->
+        <!-- Hero Section with ALL Background Videos cycling one by one -->
         <section class="hero has-bg-video" id="home">
             <div class="bg-video-wrap">
-                <video class="bg-video" autoplay muted loop playsinline preload="auto">
+                <video class="bg-video bg-video-cycle active" autoplay muted playsinline preload="auto">
                     <source src="videos/v2.mp4" type="video/mp4">
+                </video>
+                <video class="bg-video bg-video-cycle" muted playsinline preload="auto">
+                    <source src="videos/v3.mp4" type="video/mp4">
+                </video>
+                <video class="bg-video bg-video-cycle" muted playsinline preload="auto">
+                    <source src="videos/v4.mp4" type="video/mp4">
+                </video>
+                <video class="bg-video bg-video-cycle" muted playsinline preload="auto">
+                    <source src="videos/v5.mp4" type="video/mp4">
+                </video>
+                <video class="bg-video bg-video-cycle" muted playsinline preload="auto">
+                    <source src="videos/v6.mp4" type="video/mp4">
                 </video>
                 <div class="bg-video-overlay"></div>
             </div>
             <canvas id="particle-canvas" class="particle-canvas"></canvas>
             <div class="hero-visual">
-                <div class="floating-card animate-float" style="top:15%;left:3%;"><div class="floating-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div><div class="floating-card-label">Projects</div><div class="floating-card-value">200+</div></div></div>
-                <div class="floating-card animate-float" style="bottom:20%;left:3%;animation-delay:-2s;"><div class="floating-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><div class="floating-card-label">Clients</div><div class="floating-card-value">50+</div></div></div>
-                <div class="floating-card animate-float" style="top:15%;right:3%;animation-delay:-4s;"><div class="floating-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="floating-card-label">Uptime</div><div class="floating-card-value">99.9%</div></div></div>
-                <div class="floating-card animate-float" style="bottom:20%;right:3%;animation-delay:-6s;"><div class="floating-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="floating-card-label">Satisfaction</div><div class="floating-card-value">100%</div></div></div>
+                <div class="floating-card animate-float" style="top:8%;left:2%;"><div class="floating-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div><div class="floating-card-label">Projects</div><div class="floating-card-value">200+</div></div></div>
+                <div class="floating-card animate-float" style="bottom:8%;left:2%;animation-delay:-2s;"><div class="floating-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div><div class="floating-card-label">Clients</div><div class="floating-card-value">50+</div></div></div>
+                <div class="floating-card animate-float" style="top:8%;right:2%;animation-delay:-4s;"><div class="floating-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="floating-card-label">Uptime</div><div class="floating-card-value">99.9%</div></div></div>
+                <div class="floating-card animate-float" style="bottom:8%;right:2%;animation-delay:-6s;"><div class="floating-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="floating-card-label">Satisfaction</div><div class="floating-card-value">100%</div></div></div>
             </div>
             <div class="container">
                 <div class="hero-content">
@@ -112,13 +124,7 @@
 
 
         <!-- Services Section -->
-        <section class="section section-lg has-bg-video" id="services">
-            <div class="bg-video-wrap">
-                <video class="bg-video" autoplay muted loop playsinline preload="auto">
-                    <source src="videos/v3.mp4" type="video/mp4">
-                </video>
-                <div class="bg-video-overlay bg-video-overlay-light"></div>
-            </div>
+        <section class="section section-lg" id="services">
             <div class="container">
                 <div class="section-header text-center animate-on-scroll">
                     <span class="badge">Our Services</span>
@@ -156,13 +162,7 @@
         </section>
 
         <!-- Projects Showcase -->
-        <section class="section has-bg-video" style="background:var(--bg-secondary);">
-            <div class="bg-video-wrap">
-                <video class="bg-video" autoplay muted loop playsinline preload="auto">
-                    <source src="videos/v4.mp4" type="video/mp4">
-                </video>
-                <div class="bg-video-overlay bg-video-overlay-light"></div>
-            </div>
+        <section class="section" style="background:var(--bg-secondary);">
             <div class="container">
                 <div class="section-header text-center animate-on-scroll">
                     <span class="badge">Featured Work</span>
@@ -209,13 +209,7 @@
         </section>
 
         <!-- Stats Section -->
-        <section class="stats-section has-bg-video">
-            <div class="bg-video-wrap">
-                <video class="bg-video" autoplay muted loop playsinline preload="auto">
-                    <source src="videos/v5.mp4" type="video/mp4">
-                </video>
-                <div class="bg-video-overlay bg-video-overlay-dark"></div>
-            </div>
+        <section class="stats-section">
             <div class="container"><div class="stats-grid stagger-children">
                 <div class="stat-item animate-on-scroll"><div class="stat-value" data-counter="200" data-suffix="+">0</div><div class="stat-label">Projects Completed</div><div class="stat-sublabel">Across all industries</div></div>
                 <div class="stat-item animate-on-scroll"><div class="stat-value" data-counter="50" data-suffix="+">0</div><div class="stat-label">Happy Clients</div><div class="stat-sublabel">Worldwide</div></div>
@@ -269,13 +263,7 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="cta-section has-bg-video">
-            <div class="bg-video-wrap">
-                <video class="bg-video" autoplay muted loop playsinline preload="auto">
-                    <source src="videos/v6.mp4" type="video/mp4">
-                </video>
-                <div class="bg-video-overlay bg-video-overlay-dark"></div>
-            </div>
+        <section class="cta-section">
             <div class="container"><div class="cta-content animate-on-scroll"><span class="badge">Let's Build Together</span><h2 class="cta-title">Ready to Transform<br><span class="gradient-text">Your Business?</span></h2><p class="cta-description">Let's discuss how we can help you leverage technology to achieve your goals. Schedule a free consultation with our experts today.</p>
                 <div class="cta-buttons"><a href="pages/contact.html" class="btn btn-primary btn-lg">Get Free Consultation <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a href="pages/portfolio.html" class="btn btn-ghost btn-lg">View Case Studies</a></div>
             </div></div>

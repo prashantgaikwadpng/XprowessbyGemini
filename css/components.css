@@ -723,6 +723,13 @@
     min-width: 100%;
     min-height: 100%;
 }
+.bg-video-cycle {
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+.bg-video-cycle.active {
+    opacity: 1;
+}
 .bg-video-overlay {
     position: absolute;
     inset: 0;

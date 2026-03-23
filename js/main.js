@@ -195,16 +195,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ---- Background Videos: play only when visible ----
-    const bgVideos = document.querySelectorAll('.bg-video');
-    if (bgVideos.length > 0) {
-        const videoObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const video = entry.target;
-                if (entry.isIntersecting) { video.play().catch(() => {}); }
-                else { video.pause(); }
-            });
-        }, { threshold: 0.2 });
-        bgVideos.forEach(v => videoObserver.observe(v));
+    // ---- Hero Video Cycling: plays v2→v3→v4→v5→v6 one by one ----
+    const cycleVideos = document.querySelectorAll('.bg-video-cycle');
+    if (cycleVideos.length > 1) {
+        let currentIdx = 0;
+
+        // Start the first video
+        cycleVideos[0].play().catch(() => {});
+
+        function nextVideo() {
+            const current = cycleVideos[currentIdx];
+            currentIdx = (currentIdx + 1) % cycleVideos.length;
+            const next = cycleVideos[currentIdx];
+
+            // Preload and start next, crossfade
+            next.currentTime = 0;
+            next.play().catch(() => {});
+            next.classList.add('active');
+            current.classList.remove('active');
+
+            // Pause old video after fade out
+            setTimeout(() => { current.pause(); }, 1200);
+        }
+
+        // When current video ends, switch to next
+        cycleVideos.forEach(video => {
+            video.addEventListener('ended', nextVideo);
+        });
+
+        // Fallback: if a video is too long, auto-switch every 15 seconds
+        setInterval(() => {
+            const current = cycleVideos[currentIdx];
+            if (!current.ended) nextVideo();
+        }, 15000);
     }
 });
