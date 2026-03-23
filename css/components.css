@@ -241,30 +241,31 @@
 .hero-visual { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
 .floating-card {
     position: absolute;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: var(--radius-xl);
     padding: var(--space-4) var(--space-5);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
     display: flex;
     align-items: center;
     gap: var(--space-3);
     font-size: var(--text-sm);
 }
 .floating-card-icon {
-    width: 40px;
-    height: 40px;
-    background: rgba(0,212,170,0.1);
+    width: 44px;
+    height: 44px;
+    background: var(--gradient-primary);
     border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: var(--shadow-md);
 }
-.floating-card-icon svg { width: 20px; height: 20px; stroke: var(--cyber-mint); }
-.floating-card-label { font-size: var(--text-xs); color: var(--text-tertiary); }
-.floating-card-value { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; color: var(--text-primary); }
+.floating-card-icon svg { width: 22px; height: 22px; stroke: var(--text-inverse); stroke-width: 2px; }
+.floating-card-label { font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-secondary); }
+.floating-card-value { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 800; color: var(--text-primary); }
 
 /* ---------- Service Cards ---------- */
 .service-card {
