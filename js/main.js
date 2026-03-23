@@ -195,69 +195,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ---- Video Carousel ----
-    const videoTrack = document.getElementById('videoTrack');
-    const videoPrev = document.getElementById('videoPrev');
-    const videoNext = document.getElementById('videoNext');
-    const videoDots = document.getElementById('videoDots');
-
-    if (videoTrack) {
-        const slides = videoTrack.querySelectorAll('.video-slide');
-        let currentSlide = 0;
-        let autoTimer;
-
-        // Create dots
-        slides.forEach((_, i) => {
-            const dot = document.createElement('div');
-            dot.className = 'video-dot' + (i === 0 ? ' active' : '');
-            dot.addEventListener('click', () => goToSlide(i));
-            videoDots.appendChild(dot);
-        });
-
-        function goToSlide(index) {
-            currentSlide = index;
-            videoTrack.style.transform = `translateX(-${index * 100}%)`;
-            // Update dots
-            videoDots.querySelectorAll('.video-dot').forEach((d, i) => d.classList.toggle('active', i === index));
-            // Pause all videos, play current
-            slides.forEach((slide, i) => {
-                const video = slide.querySelector('video');
-                if (video) {
-                    if (i === index) { video.play().catch(() => {}); }
-                    else { video.pause(); }
-                }
+    // ---- Background Videos: play only when visible ----
+    const bgVideos = document.querySelectorAll('.bg-video');
+    if (bgVideos.length > 0) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const video = entry.target;
+                if (entry.isIntersecting) { video.play().catch(() => {}); }
+                else { video.pause(); }
             });
-        }
-
-        videoPrev?.addEventListener('click', () => goToSlide((currentSlide - 1 + slides.length) % slides.length));
-        videoNext?.addEventListener('click', () => goToSlide((currentSlide + 1) % slides.length));
-
-        // Auto-advance every 5 seconds
-        function startAuto() { autoTimer = setInterval(() => goToSlide((currentSlide + 1) % slides.length), 5000); }
-        function stopAuto() { clearInterval(autoTimer); }
-        startAuto();
-        videoTrack.addEventListener('mouseenter', stopAuto);
-        videoTrack.addEventListener('mouseleave', startAuto);
-
-        // Play video on hover for each slide
-        slides.forEach(slide => {
-            const video = slide.querySelector('video');
-            if (video) {
-                slide.addEventListener('mouseenter', () => video.play().catch(() => {}));
-                slide.addEventListener('mouseleave', () => { if (slides[currentSlide] !== slide) video.pause(); });
-            }
-        });
-
-        // Touch swipe support
-        let touchStartX = 0;
-        videoTrack.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; stopAuto(); }, { passive: true });
-        videoTrack.addEventListener('touchend', e => {
-            const diff = touchStartX - e.changedTouches[0].clientX;
-            if (Math.abs(diff) > 50) {
-                if (diff > 0) goToSlide((currentSlide + 1) % slides.length);
-                else goToSlide((currentSlide - 1 + slides.length) % slides.length);
-            }
-            startAuto();
-        }, { passive: true });
+        }, { threshold: 0.2 });
+        bgVideos.forEach(v => videoObserver.observe(v));
     }
 });

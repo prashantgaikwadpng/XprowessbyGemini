@@ -25,9 +25,10 @@
     <!-- Animated Background -->
     <div class="animated-bg"><div class="grid-overlay"></div><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <!-- Floating WhatsApp Button (LEFT side) -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float whatsapp-left" aria-label="Chat on WhatsApp">
         <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="whatsapp-label">Chat with us</span>
     </a>
 
     <!-- Navigation Overlay -->
@@ -73,8 +74,14 @@
     </nav>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero" id="home">
+        <!-- Hero Section with Background Video -->
+        <section class="hero has-bg-video" id="home">
+            <div class="bg-video-wrap">
+                <video class="bg-video" autoplay muted loop playsinline preload="auto">
+                    <source src="videos/v2.mp4" type="video/mp4">
+                </video>
+                <div class="bg-video-overlay"></div>
+            </div>
             <canvas id="particle-canvas" class="particle-canvas"></canvas>
             <div class="hero-visual">
                 <div class="floating-card animate-float" style="top:20%;left:8%;"><div class="floating-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div><div class="floating-card-label">Projects</div><div class="floating-card-value">200+</div></div></div>
@@ -101,33 +108,16 @@
             </div>
         </section>
 
-        <!-- Video Showcase Section -->
-        <section class="section" id="video-showcase" style="background:var(--bg-secondary);overflow:hidden;">
-            <div class="container">
-                <div class="section-header text-center animate-on-scroll">
-                    <span class="badge badge-purple">See Us in Action</span>
-                    <h2 class="section-title">Our Work <span class="gradient-text">Speaks Volumes</span></h2>
-                    <p class="section-subtitle">Watch how we bring ideas to life through technology.</p>
-                </div>
-                <div class="video-carousel animate-on-scroll" style="margin-top:var(--space-10);">
-                    <div class="video-carousel-track" id="videoTrack">
-                        <div class="video-slide"><video src="videos/v2.mp4" muted loop playsinline preload="metadata" class="video-player"></video><div class="video-overlay"><span>BI Dashboard Demo</span></div></div>
-                        <div class="video-slide"><video src="videos/v3.mp4" muted loop playsinline preload="metadata" class="video-player"></video><div class="video-overlay"><span>Web App Showcase</span></div></div>
-                        <div class="video-slide"><video src="videos/v4.mp4" muted loop playsinline preload="metadata" class="video-player"></video><div class="video-overlay"><span>Mobile Development</span></div></div>
-                        <div class="video-slide"><video src="videos/v5.mp4" muted loop playsinline preload="metadata" class="video-player"></video><div class="video-overlay"><span>Cloud Architecture</span></div></div>
-                        <div class="video-slide"><video src="videos/v6.mp4" muted loop playsinline preload="metadata" class="video-player"></video><div class="video-overlay"><span>AI Solutions</span></div></div>
-                    </div>
-                    <div class="video-carousel-controls">
-                        <button class="video-nav-btn" id="videoPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
-                        <div class="video-dots" id="videoDots"></div>
-                        <button class="video-nav-btn" id="videoNext" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></button>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- Services Section -->
-        <section class="section section-lg" id="services">
+        <section class="section section-lg has-bg-video" id="services">
+            <div class="bg-video-wrap">
+                <video class="bg-video" autoplay muted loop playsinline preload="auto">
+                    <source src="videos/v3.mp4" type="video/mp4">
+                </video>
+                <div class="bg-video-overlay bg-video-overlay-light"></div>
+            </div>
             <div class="container">
                 <div class="section-header text-center animate-on-scroll">
                     <span class="badge">Our Services</span>
@@ -165,7 +155,13 @@
         </section>
 
         <!-- Projects Showcase -->
-        <section class="section" style="background:var(--bg-secondary);">
+        <section class="section has-bg-video" style="background:var(--bg-secondary);">
+            <div class="bg-video-wrap">
+                <video class="bg-video" autoplay muted loop playsinline preload="auto">
+                    <source src="videos/v4.mp4" type="video/mp4">
+                </video>
+                <div class="bg-video-overlay bg-video-overlay-light"></div>
+            </div>
             <div class="container">
                 <div class="section-header text-center animate-on-scroll">
                     <span class="badge">Featured Work</span>
@@ -212,7 +208,13 @@
         </section>
 
         <!-- Stats Section -->
-        <section class="stats-section">
+        <section class="stats-section has-bg-video">
+            <div class="bg-video-wrap">
+                <video class="bg-video" autoplay muted loop playsinline preload="auto">
+                    <source src="videos/v5.mp4" type="video/mp4">
+                </video>
+                <div class="bg-video-overlay bg-video-overlay-dark"></div>
+            </div>
             <div class="container"><div class="stats-grid stagger-children">
                 <div class="stat-item animate-on-scroll"><div class="stat-value" data-counter="200" data-suffix="+">0</div><div class="stat-label">Projects Completed</div><div class="stat-sublabel">Across all industries</div></div>
                 <div class="stat-item animate-on-scroll"><div class="stat-value" data-counter="50" data-suffix="+">0</div><div class="stat-label">Happy Clients</div><div class="stat-sublabel">Worldwide</div></div>
@@ -266,7 +268,13 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="cta-section">
+        <section class="cta-section has-bg-video">
+            <div class="bg-video-wrap">
+                <video class="bg-video" autoplay muted loop playsinline preload="auto">
+                    <source src="videos/v6.mp4" type="video/mp4">
+                </video>
+                <div class="bg-video-overlay bg-video-overlay-dark"></div>
+            </div>
             <div class="container"><div class="cta-content animate-on-scroll"><span class="badge">Let's Build Together</span><h2 class="cta-title">Ready to Transform<br><span class="gradient-text">Your Business?</span></h2><p class="cta-description">Let's discuss how we can help you leverage technology to achieve your goals. Schedule a free consultation with our experts today.</p>
                 <div class="cta-buttons"><a href="pages/contact.html" class="btn btn-primary btn-lg">Get Free Consultation <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><a href="pages/portfolio.html" class="btn btn-ghost btn-lg">View Case Studies</a></div>
             </div></div>
