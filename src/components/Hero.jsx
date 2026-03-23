@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -28,33 +29,38 @@ const Hero = () => {
           We provide end-to-end software development, intelligent data warehousing, and AI-driven solutions to power the next generation of enterprises.
         </motion.p>
         
-        <motion.button
-          className="px-8 py-4 text-lg font-bold text-white bg-darkBg border border-neonCyan rounded-full hover:bg-neonCyan hover:text-darkBg transition-all duration-300 animate-glow-pulse"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Start a Project
-        </motion.button>
+        <Link to="/contact">
+          <motion.button
+            className="px-8 py-4 text-lg font-bold text-white bg-darkBg border border-neonCyan rounded-full hover:bg-neonCyan hover:text-darkBg transition-all duration-300 animate-glow-pulse"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Start a Project
+          </motion.button>
+        </Link>
       </div>
 
-      {/* 3D Dashboard Placeholder */}
+      {/* Hero Image / Dashboard */}
       <motion.div 
-        className="mt-16 w-full max-w-5xl h-64 md:h-[500px] glass rounded-2xl flex items-center justify-center p-8 relative z-10 overflow-hidden"
+        className="mt-16 w-full max-w-5xl h-64 md:h-[600px] rounded-2xl flex items-center justify-center p-1 relative z-10 overflow-hidden bg-gradient-to-br from-neonCyan/20 to-neonPurple/20 border border-white/20 shadow-[0_0_40px_rgba(0,255,255,0.2)]"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-[rgba(0,247,255,0.1)] to-[rgba(176,0,255,0.1)] opacity-50"></div>
-        <div className="text-gray-300 text-xl md:text-2xl font-semibold z-10 border border-glassBorder px-6 py-3 rounded-lg bg-glassBg backdrop-blur-md">
-          Futuristic 3D BI Dashboard Placeholder
-        </div>
+        <img src="/images/hero.png" alt="Futuristic Cityscape Cyberpunk" className="w-full h-full object-cover rounded-xl" />
         
-        {/* Decorative elements representing dashboard lines */}
-        <div className="absolute bottom-10 left-10 w-32 h-32 border-l border-b border-neonCyan opacity-50"></div>
-        <div className="absolute top-10 right-10 w-32 h-32 border-r border-t border-neonPurple opacity-50"></div>
+        {/* Floating BI Dashboard overlapping */}
+        <motion.div 
+           initial={{ y: 20, opacity: 0 }}
+           animate={{ y: 0, opacity: 1 }}
+           transition={{ delay: 1.2, duration: 1 }}
+           className="absolute -bottom-10 -right-10 w-2/3 md:w-1/2 rounded-2xl overflow-hidden border border-white/30 shadow-[0_20px_50px_rgba(188,19,254,0.5)] group"
+        >
+            <img src="/images/bi_dashboard.png" alt="BI Dashboard" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+        </motion.div>
       </motion.div>
     </section>
   );

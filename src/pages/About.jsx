@@ -99,32 +99,14 @@ const About = () => {
         </div>
       </div>
 
-      {/* Leadership Team Placeholder */}
-      <div className="bg-black/60 py-32 border-t border-white/5 relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 text-white">
-            <h2 className="text-5xl font-bold mb-4">Elite Leadership</h2>
-            <p className="text-gray-400 text-xl max-w-2xl mx-auto">Led by veterans of the technology industry.</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                className="bg-darkBg border border-white/10 rounded-3xl p-8 text-center group hover:border-pink-500 transition-all"
-              >
-                <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-white/10 to-white/5 mb-8 border border-white/20 overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-500">
-                  <div className="absolute inset-0 flex items-center justify-center text-4xl text-white/30 font-bold">
-                    [IMG]
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
-                <p className="text-pink-500 font-medium tracking-wide uppercase text-sm mb-4">{member.role}</p>
-                <p className="text-gray-500 italic">{member.exper}</p>
-              </motion.div>
-            ))}
+      {/* Massive Visual Banner */}
+      <div className="py-20 max-w-7xl mx-auto px-6">
+        <div className="w-full h-[500px] rounded-[3rem] overflow-hidden relative border border-white/20 shadow-[0_0_50px_rgba(0,255,255,0.2)]">
+          <div className="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent z-10"></div>
+          <img src="/images/team.png" alt="Xprowess Future Team" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+          <div className="absolute bottom-10 left-10 z-20">
+            <h3 className="text-4xl font-bold text-white mb-2">Our Elite Task Force</h3>
+            <p className="text-gray-300 text-xl">Engineering exactly what you envisioned.</p>
           </div>
         </div>
       </div>
