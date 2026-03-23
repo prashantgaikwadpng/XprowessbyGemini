@@ -642,3 +642,206 @@
     .feature-grid, .process-steps { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: var(--space-4); text-align: center; }
 }
+
+/* ============================================
+   NEW COMPONENTS
+   ============================================ */
+
+/* ---------- Floating WhatsApp Button ---------- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: all var(--transition-base);
+    animation: whatsapp-pulse 2s ease-in-out infinite;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+}
+@keyframes whatsapp-pulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6), 0 0 0 12px rgba(37, 211, 102, 0.08); }
+}
+
+/* ---------- Video Carousel ---------- */
+.video-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-2xl);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-default);
+    box-shadow: var(--shadow-xl);
+}
+.video-carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.video-slide {
+    min-width: 100%;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    cursor: pointer;
+}
+.video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.video-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-6) var(--space-8);
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    display: flex;
+    align-items: flex-end;
+    pointer-events: none;
+}
+.video-overlay span {
+    color: white;
+    font-weight: 600;
+    font-size: var(--text-lg);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.video-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background: var(--bg-primary);
+}
+.video-nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-default);
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+.video-nav-btn svg { width: 20px; height: 20px; stroke: var(--text-primary); fill: none; stroke-width: 2; }
+.video-nav-btn:hover { background: var(--bg-tertiary); border-color: var(--border-hover); }
+.video-dots { display: flex; gap: var(--space-2); }
+.video-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-default);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+.video-dot.active {
+    width: 30px;
+    border-radius: 5px;
+    background: var(--gradient-primary);
+}
+
+/* ---------- Testimonials ---------- */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+.testimonial-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    transition: all var(--transition-base);
+    position: relative;
+}
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-6);
+    font-size: 80px;
+    font-family: var(--font-display);
+    color: rgba(0,212,170,0.08);
+    line-height: 1;
+}
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: transparent;
+}
+.testimonial-stars {
+    color: #F59E0B;
+    font-size: var(--text-lg);
+    letter-spacing: 2px;
+    margin-bottom: var(--space-4);
+}
+.testimonial-text {
+    color: var(--text-secondary);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    font-style: italic;
+    margin-bottom: var(--space-6);
+}
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+.testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: var(--text-sm);
+    flex-shrink: 0;
+}
+.testimonial-name { font-weight: 600; font-size: var(--text-sm); }
+.testimonial-role { font-size: var(--text-xs); color: var(--text-tertiary); }
+
+/* ---------- Page Header (sub-pages) ---------- */
+.page-header {
+    padding: 160px 0 80px;
+    text-align: center;
+    background: var(--gradient-bg-hero);
+    position: relative;
+    overflow: hidden;
+}
+.page-header-title {
+    font-size: var(--text-5xl);
+    font-weight: 700;
+    margin: var(--space-4) 0;
+}
+.page-header-subtitle {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: var(--leading-relaxed);
+}
+
+@media (max-width: 768px) {
+    .testimonial-grid { grid-template-columns: 1fr; }
+    .video-overlay span { font-size: var(--text-base); }
+    .page-header { padding: 120px 0 60px; }
+    .page-header-title { font-size: var(--text-3xl); }
+    .whatsapp-float { bottom: 80px; right: 16px; width: 50px; height: 50px; }
+    .whatsapp-float svg { width: 24px; height: 24px; }
+}
