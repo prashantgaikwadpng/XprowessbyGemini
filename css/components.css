@@ -241,11 +241,13 @@
 .hero-visual { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
 .floating-card {
     position: absolute;
-    background: var(--bg-primary);
-    border: 1px solid var(--border-default);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: var(--radius-xl);
     padding: var(--space-4) var(--space-5);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
     display: flex;
     align-items: center;
     gap: var(--space-3);
@@ -723,14 +725,14 @@
 .bg-video-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(240,245,255,0.88) 50%, rgba(255,255,255,0.85) 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,0.72) 0%, rgba(240,245,255,0.75) 50%, rgba(255,255,255,0.72) 100%);
     z-index: 1;
 }
 .bg-video-overlay-light {
-    background: linear-gradient(135deg, rgba(255,255,255,0.88) 0%, rgba(245,248,255,0.92) 50%, rgba(255,255,255,0.88) 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(245,248,255,0.85) 50%, rgba(255,255,255,0.82) 100%);
 }
 .bg-video-overlay-dark {
-    background: linear-gradient(135deg, rgba(15,23,42,0.88) 0%, rgba(30,41,59,0.92) 50%, rgba(15,23,42,0.88) 100%);
+    background: linear-gradient(135deg, rgba(15,23,42,0.82) 0%, rgba(30,41,59,0.85) 50%, rgba(15,23,42,0.82) 100%);
 }
 .has-bg-video > .container,
 .has-bg-video > .stats-grid,

@@ -123,11 +123,45 @@
     filter: blur(100px);
     opacity: 0.4;
 }
-.orb-1 { width: 600px; height: 600px; background: rgba(0,212,170,0.06); top: -200px; right: -200px; }
-.orb-2 { width: 500px; height: 500px; background: rgba(123,47,247,0.05); bottom: -100px; left: -100px; }
-.orb-3 { width: 400px; height: 400px; background: rgba(59,130,246,0.04); top: 50%; left: 50%; transform: translate(-50%,-50%); }
+.orb-1 { width: 600px; height: 600px; background: rgba(0,212,170,0.08); top: -200px; right: -200px; animation: orbFloat1 20s ease-in-out infinite; }
+.orb-2 { width: 500px; height: 500px; background: rgba(123,47,247,0.06); bottom: -100px; left: -100px; animation: orbFloat2 25s ease-in-out infinite; }
+.orb-3 { width: 400px; height: 400px; background: rgba(59,130,246,0.05); top: 50%; left: 50%; transform: translate(-50%,-50%); animation: orbFloat3 18s ease-in-out infinite; }
+@keyframes orbFloat1 {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(-60px, 40px); }
+    66% { transform: translate(30px, -30px); }
+}
+@keyframes orbFloat2 {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(50px, -40px); }
+    66% { transform: translate(-30px, 50px); }
+}
+@keyframes orbFloat3 {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.15); }
+}
+
+/* ---------- Shimmer on Gradient Text (homepage) ---------- */
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+.hero-title .gradient-text {
+    background-size: 200% auto;
+    animation: shimmer 4s linear infinite;
+}
+
+/* ---------- Glow pulse for hero badge ---------- */
+@keyframes badge-glow {
+    0%, 100% { box-shadow: 0 4px 15px rgba(0,212,170,0.08); }
+    50% { box-shadow: 0 4px 25px rgba(0,212,170,0.18), 0 0 0 4px rgba(0,212,170,0.04); }
+}
+.hero-badge {
+    animation: badge-glow 3s ease-in-out infinite;
+}
 
 /* ---------- Page Enter Animation ---------- */
 main {
     animation: fadeIn 0.4s ease;
 }
+
