@@ -1,74 +1,134 @@
 // src/pages/About.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, Target, Zap, Users } from 'lucide-react';
+import { Rocket, Target, Zap, Users, Brain, HeartPulse, Sparkles, Fingerprint } from 'lucide-react';
 
 const timeline = [
-  { year: '2020', title: 'Inception', desc: 'Xprowess was born with a vision to digitize the future.' },
-  { year: '2022', title: 'Global Reach', desc: 'Expanded our operations to serve clients worldwide with cutting-edge BI solutions.' },
-  { year: '2024', title: 'AI Integration', desc: 'Pioneered AI-driven software architectures for enterprise businesses.' },
-  { year: '2026', title: 'The Future', desc: 'Leading the charge in Web3, futuristic UI, and quantum-ready infrastructure.' }
+  { year: '2018', title: 'The Genesis', desc: 'Founded by a group of ex-FAANG engineers to revolutionize local IT infrastructure.' },
+  { year: '2020', title: 'Digital Transformation', desc: 'Pivoted to enterprise-level Web Development and Business Intelligence.' },
+  { year: '2022', title: 'Global Scale', desc: 'Deployed cross-continental software solutions serving millions of daily requests.' },
+  { year: '2025', title: 'AI Era', desc: 'Deeply integrated AI predictability models across our entire suite of software products.' },
+  { year: '2026+', title: 'The Future', desc: 'Leading the charge into quantum computing integrations and autonomous code generation.' }
+];
+
+const values = [
+  { icon: Sparkles, title: 'Uncompromising Excellence', desc: 'We do not ship until the product is an absolute masterpiece of engineering and design.' },
+  { icon: Fingerprint, title: 'Absolute Integrity', desc: '100% transparency in our codebases, architecture, and billing.' },
+  { icon: Brain, title: 'Relentless Innovation', desc: 'We adopt tomorrow\'s technologies today, giving you an unfair market advantage.' }
+];
+
+const team = [
+  { name: 'Dr. John Matrix', role: 'Chief Engineering Officer', exper: 'Ex-Google Cloud Architect' },
+  { name: 'Sarah Chen', role: 'Head of BI Analytics', exper: 'Data Scientist, MIT' },
+  { name: 'Marcus Vance', role: 'Lead Web Architect', exper: 'Next.js & React Expert' },
 ];
 
 const About = () => {
   return (
-    <div className="pt-32 pb-20 px-6 max-w-7xl mx-auto min-h-screen">
-      {/* Header section */}
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center mb-20"
-      >
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-neonPurple to-pink-500 drop-shadow-[0_0_15px_rgba(0,255,255,0.3)]">
-          Pioneering the Future
-        </h1>
-        <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-          We are more than a development agency. We are architects of digital tomorrow, bridging the gap between imagination and reality.
+    <div className="pt-32 pb-20 overflow-hidden">
+      
+      {/* Hero */}
+      <div className="max-w-7xl mx-auto px-6 mb-32 relative text-center">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-neonCyan/10 blur-[150px] mix-blend-screen rounded-full pointer-events-none -z-10"></div>
+        <motion.h1 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="text-6xl md:text-8xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-br from-white via-neonCyan to-neonPurple"
+        >
+          Architects of the<br/>Digital Tomorrow.
+        </motion.h1>
+        <p className="text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          Xprowess combines extreme engineering rigor with breathtaking design. Our mission is to make the impossible, scalable.
         </p>
-      </motion.div>
-
-      {/* Mission / Vision Cards */}
-      <div className="grid md:grid-cols-2 gap-8 mb-24">
-        {[
-          { title: "Our Mission", icon: Target, text: "To empower businesses with futuristic technology that drives exponential growth." },
-          { title: "Our Vision", icon: Zap, text: "A connected universe where flawless software and intelligent insights merge." }
-        ].map((item, i) => (
-          <motion.div 
-            key={i}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-lg hover:border-neonCyan hover:shadow-[0_0_30px_-5px_rgba(0,255,255,0.3)] transition-all duration-500 relative overflow-hidden group"
-          >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-neonCyan to-transparent opacity-20 blur-[50px] group-hover:opacity-40 transition-opacity"></div>
-            <item.icon className="w-12 h-12 text-neonCyan mb-6" />
-            <h3 className="text-3xl font-bold mb-4 text-white">{item.title}</h3>
-            <p className="text-gray-400 text-lg leading-relaxed">{item.text}</p>
-          </motion.div>
-        ))}
       </div>
 
-      {/* Timeline Section */}
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 text-center">Our Journey</h2>
-        <div className="relative border-l-2 border-neonPurple/30 pl-8 ml-4 md:ml-0 space-y-12">
+      {/* Core Values */}
+      <div className="bg-darkBg/50 border-y border-white/5 py-32 backdrop-blur-3xl relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Core Values</h2>
+            <div className="w-24 h-1 bg-neonCyan mx-auto rounded-full shadow-[0_0_10px_rgba(0,255,255,0.8)]"></div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {values.map((val, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                className="bg-white/5 border border-white/10 p-10 rounded-3xl hover:-translate-y-4 hover:border-neonCyan hover:shadow-[0_20px_40px_-10px_rgba(0,255,255,0.2)] transition-all duration-500 group"
+              >
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-white/10 to-transparent border border-white/20 flex items-center justify-center mb-8 group-hover:bg-neonCyan/20 transition-colors">
+                  <val.icon className="w-10 h-10 text-white group-hover:text-neonCyan transition-colors" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{val.title}</h3>
+                <p className="text-gray-400 text-lg leading-relaxed">{val.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Journey Timeline */}
+      <div className="py-32 max-w-5xl mx-auto px-6 relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-neonPurple/10 blur-[150px] rounded-full"></div>
+        <div className="text-center mb-24">
+          <h2 className="text-5xl font-bold text-white mb-6">The Journey</h2>
+          <p className="text-xl text-gray-400">From a small room of hackers to a global tech empire.</p>
+        </div>
+
+        <div className="space-y-16 relative before:absolute before:inset-0 before:ml-[1.15rem] md:before:mx-auto md:before:translate-x-0 before:h-full before:w-[2px] before:bg-gradient-to-b before:from-neonCyan before:via-neonPurple before:to-pink-500">
           {timeline.map((item, i) => (
             <motion.div 
               key={i}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="relative"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className={`relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active`}
             >
-              <div className="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-darkBg border-[3px] border-neonPurple shadow-[0_0_10px_rgba(188,19,254,1)]"></div>
-              <span className="text-neonPurple font-bold tracking-wider uppercase text-sm mb-1 block">{item.year}</span>
-              <h4 className="text-2xl font-bold text-white mb-2">{item.title}</h4>
-              <p className="text-gray-400">{item.desc}</p>
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-darkBg bg-neonCyan text-white shadow-[0_0_15px_rgba(0,255,255,0.8)] absolute left-0 md:left-1/2 -md:translate-x-1/2 md:-ml-5 group-hover:scale-125 transition-transform z-10"></div>
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl group-hover:border-neonCyan transition-all">
+                <span className="text-neonCyan font-black text-2xl mb-2 block">{item.year}</span>
+                <h4 className="text-2xl font-bold text-white mb-3">{item.title}</h4>
+                <p className="text-gray-400 text-lg">{item.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      {/* Leadership Team Placeholder */}
+      <div className="bg-black/60 py-32 border-t border-white/5 relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20 text-white">
+            <h2 className="text-5xl font-bold mb-4">Elite Leadership</h2>
+            <p className="text-gray-400 text-xl max-w-2xl mx-auto">Led by veterans of the technology industry.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {team.map((member, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="bg-darkBg border border-white/10 rounded-3xl p-8 text-center group hover:border-pink-500 transition-all"
+              >
+                <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-white/10 to-white/5 mb-8 border border-white/20 overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-500">
+                  <div className="absolute inset-0 flex items-center justify-center text-4xl text-white/30 font-bold">
+                    [IMG]
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
+                <p className="text-pink-500 font-medium tracking-wide uppercase text-sm mb-4">{member.role}</p>
+                <p className="text-gray-500 italic">{member.exper}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };
