@@ -733,7 +733,7 @@
 .bg-video-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(255,255,255,0.45);
+    background: rgba(15,23,42,0.3);
     z-index: 1;
 }
 .bg-video-overlay-light {
@@ -748,7 +748,11 @@
     position: relative;
     z-index: 2;
 }
-.has-bg-video .hero-visual,
+.has-bg-video .hero-visual {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2;
+}
 .has-bg-video .particle-canvas {
     z-index: 2;
 }
