@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Contact Us | Xprowess</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css"><link rel="stylesheet" href="../css/components.css"><link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <div class="animated-bg"><div class="grid-overlay"></div><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+    <div class="nav-overlay"></div>
+    <header class="header"><div class="container"><a href="../index.html" class="logo"><span class="logo-text">Xprowess</span></a>
+        <nav class="nav-desktop"><div class="nav-item has-dropdown"><a href="#" class="nav-link">Services</a><div class="dropdown"><a href="bi-solutions.html" class="dropdown-item">BI Solutions</a><a href="web-development.html" class="dropdown-item">Web Dev</a><a href="mobile-apps.html" class="dropdown-item">Mobile Apps</a><a href="software.html" class="dropdown-item">Software Dev</a><a href="ai-ml.html" class="dropdown-item">AI & ML</a><a href="cloud-services.html" class="dropdown-item">Cloud</a></div></div><a href="portfolio.html" class="nav-link">Portfolio</a><a href="about.html" class="nav-link">About</a><a href="contact.html" class="nav-link active">Contact</a></nav>
+        <a href="contact.html" class="btn btn-primary btn-header">Let's Talk</a>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div></header>
+    <nav class="nav-mobile"><a href="../index.html" class="nav-link">Home</a><a href="bi-solutions.html" class="nav-link">BI</a><a href="web-development.html" class="nav-link">Web Dev</a><a href="mobile-apps.html" class="nav-link">Mobile</a><a href="software.html" class="nav-link">Software</a><a href="ai-ml.html" class="nav-link">AI & ML</a><a href="cloud-services.html" class="nav-link">Cloud</a><a href="portfolio.html" class="nav-link">Portfolio</a><a href="about.html" class="nav-link">About</a><a href="contact.html" class="nav-link active">Contact</a></nav>
+
+    <main>
+        <section class="page-header"><div class="container"><span class="badge">Get in Touch</span><h1 class="page-header-title">Contact <span class="gradient-text">Us</span></h1><p class="page-header-subtitle">Ready to start your project? Let's talk about how we can help.</p></div></section>
+
+        <section class="section"><div class="container"><div class="grid-2" style="gap:var(--space-16);">
+            <!-- Contact Form -->
+            <div class="animate-on-scroll">
+                <h2 class="section-title" style="font-size:var(--text-3xl);">Send Us a <span class="gradient-text">Message</span></h2>
+                <p style="color:var(--text-secondary);margin:var(--space-4) 0 var(--space-8);">Fill out the form below and we'll get back to you within 24 hours.</p>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! We will get back to you soon.');">
+                    <div class="grid-2" style="gap:var(--space-4);">
+                        <div class="form-group"><label class="form-label" for="name">Full Name</label><input class="form-input" type="text" id="name" placeholder="John Doe" required></div>
+                        <div class="form-group"><label class="form-label" for="email">Email Address</label><input class="form-input" type="email" id="email" placeholder="john@company.com" required></div>
+                    </div>
+                    <div class="form-group"><label class="form-label" for="company">Company</label><input class="form-input" type="text" id="company" placeholder="Your Company"></div>
+                    <div class="form-group"><label class="form-label" for="service">Service Interested In</label>
+                        <select class="form-input" id="service"><option value="">Select a service</option><option>BI Solutions</option><option>Web Development</option><option>Mobile Apps</option><option>Software Development</option><option>AI & ML Solutions</option><option>Cloud Services</option></select>
+                    </div>
+                    <div class="form-group"><label class="form-label" for="message">Project Details</label><textarea class="form-textarea" id="message" placeholder="Tell us about your project..." rows="5" required></textarea></div>
+                    <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Send Message <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </form>
+            </div>
+
+            <!-- Contact Info & FAQ -->
+            <div>
+                <div class="animate-on-scroll" style="margin-bottom:var(--space-10);">
+                    <h3 style="font-size:var(--text-2xl);margin-bottom:var(--space-6);">Contact Information</h3>
+                    <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+                        <div class="info-card"><div class="info-card-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h4>Email</h4><p>hello@xprowess.com</p></div></div>
+                        <div class="info-card"><div class="info-card-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h4>Phone</h4><p>+1 (234) 567-890</p></div></div>
+                        <div class="info-card"><div class="info-card-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Office</h4><p>Available for remote & on-site consultations worldwide</p></div></div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="animate-on-scroll delay-200">
+                    <h3 style="font-size:var(--text-2xl);margin-bottom:var(--space-6);">Frequently Asked Questions</h3>
+                    <div class="faq-item"><button class="faq-question">How long does a typical project take? <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">It depends on scope. Simple websites take 2-4 weeks, web apps 2-4 months, and enterprise solutions 4-8 months. We'll provide a detailed timeline after understanding your requirements.</div></div></div>
+                    <div class="faq-item"><button class="faq-question">What technologies do you specialize in? <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Our core stack includes React, Next.js, Node.js, Python, .NET, Flutter, Power BI, Snowflake, Azure, and AWS. We choose the best technology for each specific project.</div></div></div>
+                    <div class="faq-item"><button class="faq-question">Do you offer post-launch support? <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Yes! Every project includes a support period. We also offer ongoing maintenance, monitoring, and enhancement packages tailored to your needs.</div></div></div>
+                    <div class="faq-item"><button class="faq-question">How do you handle project communication? <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">We use Slack, Teams, or your preferred tool for daily communication, along with weekly sprint reviews, shared Jira/Trello boards, and monthly executive reports.</div></div></div>
+                </div>
+            </div>
+        </div></div></section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="logo"><span class="logo-text">Xprowess</span></a><p class="footer-description">Your partner in digital excellence.</p></div><div class="footer-links"><h4>Services</h4><ul><li><a href="bi-solutions.html">BI</a></li><li><a href="web-development.html">Web Dev</a></li><li><a href="software.html">Software</a></li><li><a href="ai-ml.html">AI & ML</a></li><li><a href="cloud-services.html">Cloud</a></li></ul></div><div class="footer-links"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2024 Xprowess.</p></div></div></footer>
+    <button class="scroll-top" aria-label="Scroll to top"><svg viewBox="0 0 24 24" fill="none"><path d="M18 15l-6-6-6 6"/></svg></button>
+    <script src="../js/main.js"></script>
+</body></html>
