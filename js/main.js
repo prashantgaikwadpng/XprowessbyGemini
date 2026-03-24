@@ -202,11 +202,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Start the first video
         cycleVideos[0].play().catch(() => {});
+        // Begin loading the second video in the background
+        if (cycleVideos.length > 1) cycleVideos[1].setAttribute('preload', 'auto');
 
         function nextVideo() {
             const current = cycleVideos[currentIdx];
             currentIdx = (currentIdx + 1) % cycleVideos.length;
             const next = cycleVideos[currentIdx];
+
+            // Start preloading the video AFTER this one so it's ready in 15 seconds
+            const afterNextIdx = (currentIdx + 1) % cycleVideos.length;
+            cycleVideos[afterNextIdx].setAttribute('preload', 'auto');
 
             // Preload and start next, crossfade
             next.currentTime = 0;
