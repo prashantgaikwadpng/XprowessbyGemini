@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css"><link rel="stylesheet" href="../css/components.css"><link rel="stylesheet" href="../css/animations.css">
+    <style>
+        .mobile-nav-details summary::-webkit-details-marker { display: none; }
+        .mobile-nav-details[open] summary svg { transform: rotate(180deg); }
+    </style>
 </head>
 <body>
     <div class="animated-bg"><div class="grid-overlay"></div><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
@@ -15,15 +19,20 @@
     <header class="header"><div class="container"><a href="../index.html" class="logo"><img src="../images/Xprowess_logo.png" alt="Xprowess" class="nav-logo-img"></a><nav class="nav-desktop"><a href="../index.html" class="nav-link">Home</a><div class="nav-item has-dropdown"><a href="#" class="nav-link active">Services</a><div class="dropdown"><a href="bi-solutions.html" class="dropdown-item">BI Solutions</a><a href="web-development.html" class="dropdown-item">Web Development</a><a href="mobile-apps.html" class="dropdown-item">Mobile Apps</a><a href="software.html" class="dropdown-item">Software Development</a><a href="ai-ml.html" class="dropdown-item">AI & ML Solutions</a><a href="cloud-services.html" class="dropdown-item">Cloud Services</a></div></div><a href="portfolio.html" class="nav-link">Portfolio</a><a href="about.html" class="nav-link">About</a><a href="contact.html" class="nav-link">Contact</a></nav><a href="contact.html" class="btn btn-primary btn-header">Let's Talk <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a><button class="mobile-menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button></div></header>
     <nav class="nav-mobile">
     <a href="../index.html" class="nav-link">Home</a>
-    <div style="margin: var(--space-4) 0 var(--space-2); padding-bottom: var(--space-2); border-bottom: 1px solid var(--border-light); color: var(--text-tertiary); font-weight: 600; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px;">Services</div>
-    <div style="padding-left: var(--space-4); border-left: 2px solid var(--border-light); margin-left: var(--space-2); margin-bottom: var(--space-4); display: flex; flex-direction: column; gap: 4px;">
-        <a href="bi-solutions.html" class="nav-link">End-to-End BI Solutions</a>
-        <a href="web-development.html" class="nav-link active">Web Development</a>
-        <a href="mobile-apps.html" class="nav-link">Mobile Apps</a>
-        <a href="software.html" class="nav-link">Software Development</a>
-        <a href="ai-ml.html" class="nav-link">AI & ML Solutions</a>
-        <a href="cloud-services.html" class="nav-link">Cloud Services</a>
-    </div>
+    <details class="mobile-nav-details" style="margin-bottom: var(--space-2);">
+        <summary class="nav-link" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer; list-style: none;">
+            Services
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.3s;"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div style="padding-left: var(--space-4); border-left: 2px solid var(--border-light); margin-left: var(--space-2); margin-top: var(--space-2); margin-bottom: var(--space-4); display: flex; flex-direction: column; gap: 4px;">
+            <a href="bi-solutions.html" class="nav-link">End-to-End BI Solutions</a>
+            <a href="web-development.html" class="nav-link active">Web Development</a>
+            <a href="mobile-apps.html" class="nav-link">Mobile Apps</a>
+            <a href="software.html" class="nav-link">Software Development</a>
+            <a href="ai-ml.html" class="nav-link">AI & ML Solutions</a>
+            <a href="cloud-services.html" class="nav-link">Cloud Services</a>
+        </div>
+    </details>
     <a href="portfolio.html" class="nav-link">Portfolio</a>
     <a href="about.html" class="nav-link">About</a>
     <a href="contact.html" class="nav-link">Contact</a>
