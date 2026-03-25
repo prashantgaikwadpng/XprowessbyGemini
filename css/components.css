@@ -865,7 +865,14 @@
     .whatsapp-float.whatsapp-left { left: 16px; bottom: 20px; width: 50px; height: 50px; }
     .whatsapp-float.whatsapp-left svg { width: 24px; height: 24px; }
     .whatsapp-label { display: none; }
-    .bg-video { display: none; }
-    .bg-video-overlay { background: var(--gradient-bg-hero) !important; }
+    .bg-video {
+        display: block;
+    }
+    .has-bg-video {
+        background: var(--bg-dark);
+    }
+    .bg-video-overlay {
+        background: rgba(15, 23, 42, 0.45) !important;
+    }
 }
 
