@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://xprowess.com/sitemap.xml
+Sitemap: https://www.xprowess.com/sitemap.xml
