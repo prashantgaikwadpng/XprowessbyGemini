@@ -894,3 +894,35 @@
     }
 }
 
+/* ---------- Services Section – Decorative Ambient Blobs ---------- */
+.services-section {
+    position: relative;
+    overflow: hidden;
+}
+.services-section::before,
+.services-section::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 0;
+    pointer-events: none;
+}
+.services-section::before {
+    width: 500px;
+    height: 500px;
+    background: rgba(0, 245, 212, 0.10);
+    top: -10%;
+    left: -8%;
+}
+.services-section::after {
+    width: 450px;
+    height: 450px;
+    background: rgba(123, 47, 247, 0.10);
+    bottom: -5%;
+    right: -6%;
+}
+.services-section > * {
+    position: relative;
+    z-index: 1;
+}
