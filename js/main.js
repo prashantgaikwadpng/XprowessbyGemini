@@ -11,21 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ---- Auto-hide Hero Badge after 5 Seconds ----
+    // ---- Auto-hide Hero Badge after 5 Seconds (Stable layout, zero page movement) ----
     setTimeout(() => {
         const heroBadge = document.querySelector('.hero-badge');
         if (heroBadge) {
             heroBadge.style.opacity = '0';
-            heroBadge.style.transform = 'translateY(-15px)';
-            heroBadge.style.maxHeight = '0px';
-            heroBadge.style.marginBottom = '0px';
-            heroBadge.style.paddingTop = '0px';
-            heroBadge.style.paddingBottom = '0px';
-            heroBadge.style.borderWidth = '0px';
-            heroBadge.style.overflow = 'hidden';
-            setTimeout(() => {
-                heroBadge.style.display = 'none';
-            }, 850);
+            heroBadge.style.visibility = 'hidden';
+            heroBadge.style.pointerEvents = 'none';
         }
     }, 5000);
 
