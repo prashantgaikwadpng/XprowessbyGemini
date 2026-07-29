@@ -214,6 +214,29 @@
     margin-bottom: var(--space-8);
 }
 .hero-badge svg { stroke: var(--cyber-mint); }
+/* ---------- Hero Text Carousel ---------- */
+.hero-carousel {
+    position: relative;
+    width: 100%;
+}
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.7s ease, visibility 0.7s ease, transform 0.7s ease;
+    transform: translateY(8px);
+}
+.hero-slide.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
 .hero-title {
     font-size: var(--text-7xl);
     font-weight: 700;
