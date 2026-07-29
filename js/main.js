@@ -11,6 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ---- Auto-hide Hero Badge after 5 Seconds ----
+    setTimeout(() => {
+        const heroBadge = document.querySelector('.hero-badge');
+        if (heroBadge) {
+            heroBadge.style.opacity = '0';
+            heroBadge.style.transform = 'translateY(-15px)';
+            heroBadge.style.maxHeight = '0px';
+            heroBadge.style.marginBottom = '0px';
+            heroBadge.style.paddingTop = '0px';
+            heroBadge.style.paddingBottom = '0px';
+            heroBadge.style.borderWidth = '0px';
+            heroBadge.style.overflow = 'hidden';
+            setTimeout(() => {
+                heroBadge.style.display = 'none';
+            }, 850);
+        }
+    }, 5000);
+
     // ---- Header Scroll Effect ----
     const header = document.querySelector('.header');
     const scrollTop = document.querySelector('.scroll-top');
