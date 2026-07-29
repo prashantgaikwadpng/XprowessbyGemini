@@ -1,3 +1,6 @@
-User-agent: *
-Allow: /
-Sitemap: https://www.xprowess.com/sitemap.xml
+https://www.xprowess.com/
+https://xprowess.com/
+our website is running best now we hosted in on cloudflare free 
+and its running smoothly 
+now for SEO , google analytics , google tag manager, google search console, this we need to do from here we are able to do or should i do myslef and give details so our website will rank 
+ 
