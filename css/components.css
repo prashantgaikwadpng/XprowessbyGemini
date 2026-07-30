@@ -300,7 +300,7 @@
 /* Hover State - Blue Tint Background + Vibrant Blue Border & Glow */
 .service-card:hover {
     background: linear-gradient(145deg, #ffffff, #f0f7ff);
-    transform: translateY(-8px) scale(1.015);
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-8px) scale(1.015);
     box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.25), 0 8px 16px -4px rgba(0, 212, 170, 0.15);
     border-color: rgba(59, 130, 246, 0.5);
 }
