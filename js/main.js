@@ -245,4 +245,81 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!current.ended) nextVideo();
         }, 15000);
     }
+
+    // ---- Instant Top Micro-Progress Bar & Card Click Handler ----
+    let topBar = document.getElementById('top-micro-bar');
+    if (!topBar && document.body) {
+        topBar = document.createElement('div');
+        topBar.id = 'top-micro-bar';
+        topBar.className = 'top-micro-bar';
+        document.body.appendChild(topBar);
+    }
+
+    // Always reset top loader and card states on page load / back-forward cache
+    function resetLoaders() {
+        if (topBar) {
+            topBar.classList.remove('active');
+            topBar.style.width = '0%';
+        }
+        document.querySelectorAll('.service-card.card-loading').forEach(card => {
+            card.classList.remove('card-loading');
+        });
+    }
+    resetLoaders();
+    window.addEventListener('pageshow', resetLoaders);
+
+    // Fast millisecond navigation on card or link click
+    document.addEventListener('click', (e) => {
+        // Handle clicks on cards directly or links
+        const card = e.target.closest('.service-card');
+        const link = e.target.closest('a');
+
+        let targetHref = null;
+
+        if (link) {
+            targetHref = link.getAttribute('href');
+        } else if (card) {
+            const cardLink = card.querySelector('a');
+            if (cardLink) targetHref = cardLink.getAttribute('href');
+        }
+
+        if (!targetHref) return;
+
+        // Skip non-navigational links
+        if (targetHref === '#' || 
+            targetHref.startsWith('#') || 
+            targetHref.startsWith('javascript:') || 
+            targetHref.startsWith('mailto:') || 
+            targetHref.startsWith('tel:') || 
+            targetHref.includes('wa.me') || 
+            (link && link.getAttribute('target') === '_blank') ||
+            e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) {
+            return;
+        }
+
+        // Verify internal domain link
+        try {
+            const destUrl = new URL(targetHref, window.location.href);
+            if (destUrl.origin !== window.location.origin) return;
+            if (destUrl.href === window.location.href) return;
+        } catch (err) {
+            return;
+        }
+
+        // Provide instant micro visual feedback
+        e.preventDefault();
+
+        if (card) {
+            card.classList.add('card-loading');
+        }
+
+        if (topBar) {
+            topBar.classList.add('active');
+        }
+
+        // Lightning fast millisecond page transition (100ms)
+        setTimeout(() => {
+            window.location.href = targetHref;
+        }, 100);
+    });
 });
