@@ -958,60 +958,93 @@
     }
 }
 
-/* ---------- Maxify-Style Mission Section & Overlapping White Card ---------- */
+/* ---------- Mission Hero Section & Overlapping Blue Card ---------- */
 .maxify-mission-section {
     position: relative;
     background: var(--bg-primary);
-    padding-top: var(--space-12);
+    padding: var(--space-12) 0 var(--space-16);
     overflow: hidden;
 }
 
 .maxify-floating-card {
-    background: var(--bg-primary);
-    border-radius: 24px;
-    padding: var(--space-8);
-    box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
     display: grid;
-    grid-template-columns: 42% 58%;
-    gap: var(--space-8);
+    grid-template-columns: 44% 56%;
+    gap: 0;
     align-items: center;
-    border: 1px solid var(--border-light);
-    max-width: 1040px;
+    max-width: 1060px;
     margin: 0 auto;
     position: relative;
     z-index: 3;
 }
 
-.maxify-blue-bottom-banner {
-    background: #1d4ed8;
-    margin-top: -140px;
-    padding-top: 185px;
-    padding-bottom: 34px;
+.mission-left-image-box {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: 24px;
+    padding: var(--space-8);
+    box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.12);
     position: relative;
-    z-index: 1;
+    z-index: 4;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+}
+
+.mission-left-image-box img {
+    max-width: 100%;
+    max-height: 340px;
+    object-fit: contain;
+}
+
+.mission-right-blue-card {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    border-radius: 24px;
+    padding: var(--space-10) var(--space-8) var(--space-8) var(--space-12);
+    margin-left: -50px;
+    transform: translateY(-8px);
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 20px 40px -10px rgba(29, 78, 216, 0.38);
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.maxify-blue-bottom-banner p {
-    margin: 0;
+.mission-right-blue-card p {
+    color: rgba(255, 255, 255, 0.94) !important;
     font-size: var(--text-base);
-    font-weight: 500;
-    color: #ffffff !important;
-    letter-spacing: 0.3px;
+    line-height: var(--leading-relaxed);
 }
 
-/* Mobile Responsiveness for Maxify Mission */
+.mission-right-blue-card .mission-caption-strip {
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    padding-top: var(--space-4);
+    margin-top: var(--space-6);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    color: #93c5fd;
+    letter-spacing: 0.4px;
+}
+
+/* Mobile Responsiveness for Mission Section */
 @media (max-width: 868px) {
     .maxify-floating-card {
         grid-template-columns: 1fr;
-        padding: var(--space-6);
-        gap: var(--space-6);
     }
-    .maxify-blue-bottom-banner {
-        margin-top: -180px;
-        padding-top: 210px;
-        padding-bottom: 24px;
+    .mission-left-image-box {
+        width: 100%;
+        margin-bottom: -35px;
+        min-height: auto;
+        padding: var(--space-6);
+    }
+    .mission-right-blue-card {
+        margin-left: 0;
+        transform: translateY(0);
+        padding: var(--space-12) var(--space-6) var(--space-6) var(--space-6);
+        border-radius: 24px;
     }
 }
 
