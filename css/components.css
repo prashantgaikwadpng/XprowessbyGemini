@@ -297,22 +297,22 @@
     transition: opacity 0.35s ease, height 0.35s ease;
 }
 
-/* Hover State - Solid Blue Background with White Text */
+/* Hover State - Premium Light Blue Tint, blue border glow, text stays dark */
 .service-card:hover {
-    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    background: linear-gradient(145deg, #f0f6ff, #e8f0fe);
     transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-8px) scale(1.015);
-    box-shadow: 0 20px 40px -10px rgba(29, 78, 216, 0.45), 0 8px 16px -4px rgba(37, 99, 235, 0.25);
-    border-color: transparent;
+    box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.22), 0 8px 16px -4px rgba(37, 99, 235, 0.12);
+    border-color: rgba(37, 99, 235, 0.45);
 }
 .service-card:hover::before {
-    opacity: 0;
+    opacity: 1;
     height: 4px;
 }
 .service-card:hover .service-card-title,
 .service-card:hover h3,
 .service-card:hover p,
 .service-card:hover .service-card-description {
-    color: rgba(255, 255, 255, 0.95) !important;
+    color: inherit !important;
 }
 
 .service-card-primary { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center; }
@@ -336,10 +336,10 @@
     transition: stroke 0.35s ease, transform 0.35s ease;
 }
 .service-card:hover .service-card-link {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #1d4ed8 !important;
 }
 .service-card:hover .service-card-link svg {
-    stroke: rgba(255, 255, 255, 0.9) !important;
+    stroke: #1d4ed8 !important;
     transform: translateX(6px);
 }
 .service-card:hover .service-card-icon {
