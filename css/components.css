@@ -804,13 +804,13 @@
     position: absolute;
     left: 50%;
     top: 0;
-    width: 13px;
-    height: 13px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background: var(--cyber-mint);
-    box-shadow: 0 0 12px var(--cyber-mint), 0 0 24px var(--electric-purple);
+    box-shadow: 0 0 14px var(--cyber-mint), 0 0 28px var(--electric-purple);
     transform: translate(-50%, -50%);
-    animation: timelineTravelPulse 4.5s cubic-bezier(0.45, 0, 0.15, 1) infinite;
+    animation: timelineTravelPulse 12s linear infinite;
     z-index: 5;
 }
 
@@ -820,13 +820,13 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.6);
     }
-    10% {
+    5% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1.4);
+        transform: translate(-50%, -50%) scale(1.3);
     }
-    90% {
+    95% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1.4);
+        transform: translate(-50%, -50%) scale(1.3);
     }
     100% {
         top: 100%;
