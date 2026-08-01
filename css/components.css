@@ -958,7 +958,7 @@
     }
 }
 
-/* ---------- Mission Hero Section & Overlapping Blue Card ---------- */
+/* ---------- Mission Hero Section & Clean 2-Column Blue Card ---------- */
 .maxify-mission-section {
     position: relative;
     background: var(--bg-primary);
@@ -968,10 +968,10 @@
 
 .maxify-floating-card {
     display: grid;
-    grid-template-columns: 44% 56%;
-    gap: 0;
-    align-items: center;
-    max-width: 1060px;
+    grid-template-columns: 40% 60%;
+    gap: var(--space-8);
+    align-items: stretch;
+    max-width: 1080px;
     margin: 0 auto;
     position: relative;
     z-index: 3;
@@ -982,9 +982,9 @@
     border: 1px solid var(--border-light);
     border-radius: 24px;
     padding: var(--space-8);
-    box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.08);
     position: relative;
-    z-index: 4;
+    z-index: 3;
     text-align: center;
     display: flex;
     align-items: center;
@@ -1001,24 +1001,27 @@
 .mission-right-blue-card {
     background: linear-gradient(135deg, #1d4ed8, #1e40af);
     border-radius: 24px;
-    padding: var(--space-10) var(--space-8) var(--space-8) var(--space-12);
-    margin-left: -50px;
-    margin-top: -24px;
-    transform: translateY(-16px);
+    padding: var(--space-10) var(--space-10);
+    margin-left: 0;
+    transform: none;
     position: relative;
     z-index: 3;
-    box-shadow: 0 20px 40px -10px rgba(29, 78, 216, 0.38);
+    box-shadow: 0 20px 40px -10px rgba(29, 78, 216, 0.35);
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-self: center;
 }
 
 .mission-right-blue-card p {
-    color: rgba(255, 255, 255, 0.94) !important;
-    font-size: var(--text-base);
-    line-height: var(--leading-relaxed);
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: var(--space-5);
+}
+
+.mission-right-blue-card p:last-of-type {
+    margin-bottom: 0;
 }
 
 .mission-right-blue-card .mission-caption-strip {
@@ -1035,18 +1038,18 @@
 @media (max-width: 868px) {
     .maxify-floating-card {
         grid-template-columns: 1fr;
+        gap: var(--space-6);
     }
     .mission-left-image-box {
         width: 100%;
-        margin-bottom: -35px;
+        margin-bottom: 0;
         min-height: auto;
         padding: var(--space-6);
     }
     .mission-right-blue-card {
         margin-left: 0;
-        margin-top: 0;
-        transform: translateY(0);
-        padding: var(--space-12) var(--space-6) var(--space-6) var(--space-6);
+        transform: none;
+        padding: var(--space-8) var(--space-6);
         border-radius: 24px;
     }
 }
