@@ -106,35 +106,36 @@
             </div>
         </section>
 
-        <!-- Our Mission Section with Two-Tone Accent Banner & Target Mission Image -->
-        <section class="section" style="position:relative;padding:var(--space-16) 0 var(--space-20);overflow:hidden;">
-            <div class="container text-center animate-on-scroll" style="margin-bottom:var(--space-12);">
+        <!-- Our Mission Section with Overlapping Blue Card Showcase -->
+        <section class="section" style="position:relative;padding:var(--space-16) 0;overflow:hidden;">
+            <div class="container text-center animate-on-scroll" style="margin-bottom:var(--space-8);">
                 <span class="badge badge-mint" style="margin-bottom:var(--space-3);">Our Mission</span>
                 <h2 class="section-title" style="font-size:clamp(2rem, 4vw, 3rem);max-width:900px;margin:0 auto;line-height:1.2;">
                     Empowering Businesses Through <span class="gradient-text">Data-Driven Innovation</span>
                 </h2>
             </div>
 
-            <!-- Two-Tone Card Showcase -->
-            <div class="container" style="position:relative;z-index:2;">
-                <div class="animate-on-scroll" style="background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius-2xl);padding:var(--space-10);box-shadow:var(--shadow-xl);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12);align-items:center;">
-                    <div style="text-align:center;background:var(--bg-tertiary);border-radius:var(--radius-xl);padding:var(--space-6);display:flex;align-items:center;justify-content:center;">
-                        <img src="../images/mission_target.png" alt="Xprowess Mission Target" style="max-width:100%;max-height:360px;object-fit:contain;filter:drop-shadow(0 10px 20px rgba(0,0,0,0.15));">
+            <!-- Overlapping Two-Tone Showcase -->
+            <div class="container">
+                <div class="mission-showcase-wrapper animate-on-scroll">
+                    <!-- Left White Image Container -->
+                    <div class="mission-image-card">
+                        <img src="../images/mission_target.png" alt="Xprowess Mission Target">
                     </div>
-                    <div style="display:flex;flex-direction:column;justify-content:center;">
-                        <p style="color:var(--text-secondary);line-height:var(--leading-relaxed);font-size:var(--text-base);margin-bottom:var(--space-6);">
+                    
+                    <!-- Right Blue Accent Container (Framing & Overlapping Text) -->
+                    <div class="mission-blue-card">
+                        <p style="margin-bottom:var(--space-6);">
                             Xprowess is a Pune-based B2B technology consulting firm helping businesses turn raw data into decisions and outdated systems into modern, scalable platforms. From data engineering and business intelligence to web development and AI/ML solutions, we partner with growing companies that need enterprise-grade technology without enterprise-level overhead.
                         </p>
-                        <p style="color:var(--text-secondary);line-height:var(--leading-relaxed);font-size:var(--text-base);">
+                        <p>
                             Our mission is simple: make advanced technology accessible to businesses of every size. Whether it's building a data warehouse that scales with your growth, designing a BI dashboard your team actually uses, or developing a website that converts visitors into customers, we combine deep technical expertise with a genuine understanding of what your business needs to succeed - not just what's technically impressive.
                         </p>
+                        <div class="mission-caption-strip">
+                            <span>What We Do: Enterprise Digital Solutions & Data Transformation</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Two-Tone Bottom Background Strip -->
-            <div style="position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(135deg, var(--neon-blue), var(--electric-purple));z-index:1;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:var(--text-sm);letter-spacing:0.5px;">
-                <span>What We Do: Enterprise Digital Solutions & Data Transformation</span>
             </div>
         </section>
 
