@@ -297,16 +297,22 @@
     transition: opacity 0.35s ease, height 0.35s ease;
 }
 
-/* Hover State - Blue Tint Background + Vibrant Blue Border & Glow */
+/* Hover State - Solid Blue Background with White Text */
 .service-card:hover {
-    background: linear-gradient(145deg, #ffffff, #f0f7ff);
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
     transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-8px) scale(1.015);
-    box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.25), 0 8px 16px -4px rgba(0, 212, 170, 0.15);
-    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 20px 40px -10px rgba(29, 78, 216, 0.45), 0 8px 16px -4px rgba(37, 99, 235, 0.25);
+    border-color: transparent;
 }
 .service-card:hover::before {
-    opacity: 1;
+    opacity: 0;
     height: 4px;
+}
+.service-card:hover .service-card-title,
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover .service-card-description {
+    color: rgba(255, 255, 255, 0.95) !important;
 }
 
 .service-card-primary { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center; }
@@ -328,6 +334,13 @@
     fill: none;
     stroke-width: 1.5;
     transition: stroke 0.35s ease, transform 0.35s ease;
+}
+.service-card:hover .service-card-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+.service-card:hover .service-card-link svg {
+    stroke: rgba(255, 255, 255, 0.9) !important;
+    transform: translateX(6px);
 }
 .service-card:hover .service-card-icon {
     background: rgba(59, 130, 246, 0.12);
@@ -707,10 +720,16 @@
     position: relative;
 }
 .portfolio-card:hover {
-    background: linear-gradient(145deg, #ffffff, #f0f7ff);
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
     transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-8px) scale(1.015);
-    box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.25), 0 8px 16px -4px rgba(0, 212, 170, 0.15);
-    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 20px 40px -10px rgba(29, 78, 216, 0.45), 0 8px 16px -4px rgba(37, 99, 235, 0.25);
+    border-color: transparent;
+}
+.portfolio-card:hover .portfolio-card-content h3 {
+    color: #ffffff !important;
+}
+.portfolio-card:hover .portfolio-card-content p {
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 .portfolio-card-image {
     width: 100%;
@@ -746,8 +765,8 @@
     transition: background 0.3s ease, color 0.3s ease;
 }
 .portfolio-card:hover .portfolio-tag {
-    background: rgba(59, 130, 246, 0.1);
-    color: #2563eb;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
 }
 
 /* FAQ */
@@ -1218,9 +1237,15 @@
     line-height: 1;
 }
 .testimonial-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -10px rgba(29, 78, 216, 0.45);
     border-color: transparent;
+}
+.testimonial-card:hover .testimonial-text,
+.testimonial-card:hover .testimonial-name,
+.testimonial-card:hover .testimonial-role {
+    color: rgba(255, 255, 255, 0.92) !important;
 }
 .testimonial-stars {
     color: #F59E0B;
