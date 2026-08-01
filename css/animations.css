@@ -108,6 +108,33 @@
 .stagger-children .portfolio-card.animate-on-scroll:nth-child(5) { transition-delay: 0.49s; }
 .stagger-children .portfolio-card.animate-on-scroll:nth-child(6) { transition-delay: 0.60s; }
 
+/* ---------- 3D Rotate & Flip Entry Animation for Timeline Rows ---------- */
+.pro-timeline-row.pro-timeline-right.animate-on-scroll {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(-25deg) rotateX(10deg) translateX(40px) scale(0.92);
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+    transition: transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.pro-timeline-row.pro-timeline-left.animate-on-scroll {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(25deg) rotateX(10deg) translateX(-40px) scale(0.92);
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+    transition: transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.pro-timeline-row.animate-on-scroll.animated {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateX(0) scale(1);
+}
+
+.pro-timeline-container .pro-timeline-row:nth-child(2) { transition-delay: 0.1s; }
+.pro-timeline-container .pro-timeline-row:nth-child(3) { transition-delay: 0.25s; }
+.pro-timeline-container .pro-timeline-row:nth-child(4) { transition-delay: 0.40s; }
+.pro-timeline-container .pro-timeline-row:nth-child(5) { transition-delay: 0.55s; }
+
 /* ---------- Preloader ---------- */
 .preloader {
     position: fixed;
