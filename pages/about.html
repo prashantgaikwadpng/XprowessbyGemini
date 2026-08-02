@@ -108,15 +108,21 @@
 
         <style>
             .half-blue-showcase {
-                background: linear-gradient(180deg, #1d4ed8 0%, #2563eb 245px, #ffffff 245px, #ffffff 100%);
+                background: linear-gradient(180deg, #1d4ed8 0%, #2563eb 275px, #ffffff 275px, #ffffff 100%);
                 padding: var(--space-16) 0;
                 position: relative;
                 overflow: hidden;
             }
+            .half-blue-showcase.mission-section {
+                background: linear-gradient(180deg, #1d4ed8 0%, #2563eb 195px, #ffffff 195px, #ffffff 100%);
+            }
             @media (max-width: 768px) {
                 .half-blue-showcase {
-                    background: linear-gradient(180deg, #1d4ed8 0%, #2563eb 510px, #ffffff 510px, #ffffff 100%) !important;
+                    background: linear-gradient(180deg, #1d4ed8 0%, #2563eb 540px, #ffffff 540px, #ffffff 100%) !important;
                     padding: var(--space-10) 0 !important;
+                }
+                .half-blue-showcase.mission-section {
+                    background: linear-gradient(180deg, #1d4ed8 0%, #2563eb 470px, #ffffff 470px, #ffffff 100%) !important;
                 }
             }
         </style>
@@ -147,8 +153,8 @@
             </div>
         </section>
 
-        <!-- Our Mission Section (Half-Blue Split Background) -->
-        <section class="section half-blue-showcase">
+        <!-- Our Mission Section (Half-Blue Split Background - Custom Tailored Gradient for Shorter Title) -->
+        <section class="section half-blue-showcase mission-section">
             <div class="container">
                 <div class="grid-2 animate-on-scroll" style="gap:var(--space-12);align-items:center;">
                     <!-- Left Image Container -->
