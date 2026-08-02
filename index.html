@@ -312,6 +312,30 @@
         </section>
 
         <!-- Client Testimonials (Moving Carousel Slider) -->
+        <style>
+            @media (max-width: 640px) {
+                .t-arrow-btn {
+                    width: 36px !important;
+                    height: 36px !important;
+                }
+                .t-arrow-prev { left: -6px !important; }
+                .t-arrow-next { right: -6px !important; }
+                .t-slide-card {
+                    padding: var(--space-6) var(--space-4) !important;
+                    border-radius: 18px !important;
+                }
+                .t-badge-pill {
+                    font-size: 11px !important;
+                    padding: 4px 10px !important;
+                    max-width: 100% !important;
+                }
+                .t-header-badge {
+                    font-size: 12px !important;
+                    padding: 6px 14px !important;
+                    max-width: 95% !important;
+                }
+            }
+        </style>
         <section class="section" style="position:relative;background:linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1d4ed8 100%);padding:var(--space-20) 0;overflow:hidden;">
             <!-- Ambient Background Glows -->
             <div style="position:absolute;top:-10%;left:10%;width:350px;height:350px;background:radial-gradient(circle, rgba(37,99,235,0.3), transparent 70%);pointer-events:none;"></div>
@@ -319,10 +343,10 @@
 
             <div class="container" style="position:relative;z-index:2;">
                 <div class="section-header text-center animate-on-scroll" style="margin-bottom:var(--space-12);">
-                    <!-- Google Rating Badge -->
-                    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);padding:8px 22px;border-radius:30px;border:1px solid rgba(255,255,255,0.22);margin-bottom:16px;box-shadow:0 8px 20px rgba(0,0,0,0.2);">
+                    <!-- Google Rating Header Badge -->
+                    <div class="t-header-badge" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);padding:8px 22px;border-radius:30px;border:1px solid rgba(255,255,255,0.22);margin-bottom:16px;box-shadow:0 8px 20px rgba(0,0,0,0.2);">
                         <img src="images/Google-Logo.png" alt="Google Logo" style="height:22px;width:auto;" onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg';">
-                        <span style="color:#ffffff;font-size:14px;font-weight:700;display:flex;align-items:center;gap:6px;">
+                        <span style="color:#ffffff;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;">
                             <span style="color:#fbbf24;font-size:16px;">★★★★★</span> <span style="color:#60a5fa;font-weight:800;">4.9 / 5.0</span> Rating on Google Reviews
                         </span>
                     </div>
@@ -338,13 +362,13 @@
                         <div id="testimonialTrack" style="display:flex;transition:transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);width:100%;">
                             
                             <!-- Slide 1 -->
-                            <div style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:var(--space-10) var(--space-8);background:rgba(255, 255, 255, 0.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255, 255, 255, 0.15);border-radius:24px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,0.3);">
-                                <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;background:rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.15);">
+                            <div class="t-slide-card" style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:var(--space-10) var(--space-8);background:rgba(255, 255, 255, 0.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255, 255, 255, 0.15);border-radius:24px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,0.3);">
+                                <div class="t-badge-pill" style="display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;background:rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.15);">
                                     <img src="images/Google-Logo.png" alt="Google Review" style="height:18px;width:auto;" onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg';">
-                                    <span style="color:#fbbf24;font-size:16px;letter-spacing:1px;">★★★★★</span>
+                                    <span style="color:#fbbf24;font-size:15px;letter-spacing:1px;">★★★★★</span>
                                     <span style="color:#e2e8f0;font-size:13px;font-weight:600;">Verified Google Review</span>
                                 </div>
-                                <p style="color:#f8fafc;font-size:clamp(1.1rem, 2.2vw, 1.35rem);line-height:1.65;font-style:italic;margin-bottom:24px;max-width:700px;margin-left:auto;margin-right:auto;">
+                                <p style="color:#f8fafc;font-size:clamp(1rem, 2.2vw, 1.35rem);line-height:1.65;font-style:italic;margin-bottom:24px;max-width:700px;margin-left:auto;margin-right:auto;">
                                     "Xprowess transformed our entire data infrastructure. Their BI team built dashboards that our C-suite now uses daily. The ROI was visible within the first quarter."
                                 </p>
                                 <div style="display:flex;flex-direction:column;align-items:center;">
@@ -355,13 +379,13 @@
                             </div>
 
                             <!-- Slide 2 -->
-                            <div style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:var(--space-10) var(--space-8);background:rgba(255, 255, 255, 0.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255, 255, 255, 0.15);border-radius:24px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,0.3);">
-                                <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;background:rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.15);">
+                            <div class="t-slide-card" style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:var(--space-10) var(--space-8);background:rgba(255, 255, 255, 0.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255, 255, 255, 0.15);border-radius:24px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,0.3);">
+                                <div class="t-badge-pill" style="display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;background:rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.15);">
                                     <img src="images/Google-Logo.png" alt="Google Review" style="height:18px;width:auto;" onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg';">
-                                    <span style="color:#fbbf24;font-size:16px;letter-spacing:1px;">★★★★★</span>
+                                    <span style="color:#fbbf24;font-size:15px;letter-spacing:1px;">★★★★★</span>
                                     <span style="color:#e2e8f0;font-size:13px;font-weight:600;">Verified Google Review</span>
                                 </div>
-                                <p style="color:#f8fafc;font-size:clamp(1.1rem, 2.2vw, 1.35rem);line-height:1.65;font-style:italic;margin-bottom:24px;max-width:700px;margin-left:auto;margin-right:auto;">
+                                <p style="color:#f8fafc;font-size:clamp(1rem, 2.2vw, 1.35rem);line-height:1.65;font-style:italic;margin-bottom:24px;max-width:700px;margin-left:auto;margin-right:auto;">
                                     "The eCommerce platform they built handles 10,000+ daily orders flawlessly. Their attention to detail and post-launch support is exceptional."
                                 </p>
                                 <div style="display:flex;flex-direction:column;align-items:center;">
@@ -372,13 +396,13 @@
                             </div>
 
                             <!-- Slide 3 -->
-                            <div style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:var(--space-10) var(--space-8);background:rgba(255, 255, 255, 0.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255, 255, 255, 0.15);border-radius:24px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,0.3);">
-                                <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;background:rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.15);">
+                            <div class="t-slide-card" style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:var(--space-10) var(--space-8);background:rgba(255, 255, 255, 0.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255, 255, 255, 0.15);border-radius:24px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,0.3);">
+                                <div class="t-badge-pill" style="display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;background:rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.15);">
                                     <img src="images/Google-Logo.png" alt="Google Review" style="height:18px;width:auto;" onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg';">
-                                    <span style="color:#fbbf24;font-size:16px;letter-spacing:1px;">★★★★★</span>
+                                    <span style="color:#fbbf24;font-size:15px;letter-spacing:1px;">★★★★★</span>
                                     <span style="color:#e2e8f0;font-size:13px;font-weight:600;">Verified Google Review</span>
                                 </div>
-                                <p style="color:#f8fafc;font-size:clamp(1.1rem, 2.2vw, 1.35rem);line-height:1.65;font-style:italic;margin-bottom:24px;max-width:700px;margin-left:auto;margin-right:auto;">
+                                <p style="color:#f8fafc;font-size:clamp(1rem, 2.2vw, 1.35rem);line-height:1.65;font-style:italic;margin-bottom:24px;max-width:700px;margin-left:auto;margin-right:auto;">
                                     "Our mobile app went from concept to App Store in 12 weeks. The Flutter expertise at Xprowess is world-class. Users love the smooth experience."
                                 </p>
                                 <div style="display:flex;flex-direction:column;align-items:center;">
@@ -389,13 +413,13 @@
                             </div>
 
                             <!-- Slide 4 -->
-                            <div style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:var(--space-10) var(--space-8);background:rgba(255, 255, 255, 0.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255, 255, 255, 0.15);border-radius:24px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,0.3);">
-                                <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;background:rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.15);">
+                            <div class="t-slide-card" style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:var(--space-10) var(--space-8);background:rgba(255, 255, 255, 0.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255, 255, 255, 0.15);border-radius:24px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,0.3);">
+                                <div class="t-badge-pill" style="display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;background:rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;border:1px solid rgba(255,255,255,0.15);">
                                     <img src="images/Google-Logo.png" alt="Google Review" style="height:18px;width:auto;" onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg';">
-                                    <span style="color:#fbbf24;font-size:16px;letter-spacing:1px;">★★★★★</span>
+                                    <span style="color:#fbbf24;font-size:15px;letter-spacing:1px;">★★★★★</span>
                                     <span style="color:#e2e8f0;font-size:13px;font-weight:600;">Verified Google Review</span>
                                 </div>
-                                <p style="color:#f8fafc;font-size:clamp(1.1rem, 2.2vw, 1.35rem);line-height:1.65;font-style:italic;margin-bottom:24px;max-width:700px;margin-left:auto;margin-right:auto;">
+                                <p style="color:#f8fafc;font-size:clamp(1rem, 2.2vw, 1.35rem);line-height:1.65;font-style:italic;margin-bottom:24px;max-width:700px;margin-left:auto;margin-right:auto;">
                                     "The cloud migration was seamless—zero downtime, under budget, and ahead of schedule. Xprowess's Azure expertise saved us $200K annually."
                                 </p>
                                 <div style="display:flex;flex-direction:column;align-items:center;">
@@ -409,10 +433,10 @@
                     </div>
 
                     <!-- Navigation Arrows -->
-                    <button onclick="prevTestimonialSlide()" aria-label="Previous Review" style="position:absolute;top:50%;left:-20px;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.25);color:#ffffff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s ease;z-index:10;" onmouseenter="this.style.background='rgba(37,99,235,0.8)';this.style.transform='translateY(-50%) scale(1.1)';" onmouseleave="this.style.background='rgba(255,255,255,0.15)';this.style.transform='translateY(-50%) scale(1)';">
+                    <button onclick="prevTestimonialSlide()" aria-label="Previous Review" class="t-arrow-btn t-arrow-prev" style="position:absolute;top:50%;left:-20px;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.25);color:#ffffff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s ease;z-index:10;" onmouseenter="this.style.background='rgba(37,99,235,0.8)';this.style.transform='translateY(-50%) scale(1.1)';" onmouseleave="this.style.background='rgba(255,255,255,0.15)';this.style.transform='translateY(-50%) scale(1)';">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
                     </button>
-                    <button onclick="nextTestimonialSlide()" aria-label="Next Review" style="position:absolute;top:50%;right:-20px;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.25);color:#ffffff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s ease;z-index:10;" onmouseenter="this.style.background='rgba(37,99,235,0.8)';this.style.transform='translateY(-50%) scale(1.1)';" onmouseleave="this.style.background='rgba(255,255,255,0.15)';this.style.transform='translateY(-50%) scale(1)';">
+                    <button onclick="nextTestimonialSlide()" aria-label="Next Review" class="t-arrow-btn t-arrow-next" style="position:absolute;top:50%;right:-20px;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.25);color:#ffffff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s ease;z-index:10;" onmouseenter="this.style.background='rgba(37,99,235,0.8)';this.style.transform='translateY(-50%) scale(1.1)';" onmouseleave="this.style.background='rgba(255,255,255,0.15)';this.style.transform='translateY(-50%) scale(1)';">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
                     </button>
 
