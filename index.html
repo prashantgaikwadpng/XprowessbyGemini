@@ -474,6 +474,236 @@
             </div>
         </section>
 
+        <!-- Featured Case Studies Carousel Section -->
+        <section class="section" style="position:relative;background:radial-gradient(circle at 10% 30%, rgba(37, 99, 235, 0.06), transparent 50%), radial-gradient(circle at 90% 70%, rgba(123, 47, 247, 0.05), transparent 50%), #ffffff;padding:var(--space-20) 0;overflow:hidden;">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header text-center animate-on-scroll" style="max-width:850px;margin:0 auto var(--space-12);">
+                    <span class="badge badge-purple" style="letter-spacing:1px;">// Real Impact & Results</span>
+                    <h2 class="section-title" style="margin-top:var(--space-3);">Featured <span class="gradient-text">Case Studies</span></h2>
+                    <p class="section-subtitle" style="max-width:750px;margin:var(--space-4) auto 0;color:var(--text-secondary);font-size:var(--text-base);line-height:var(--leading-relaxed);">
+                        Explore how we helped businesses transform complex technical challenges into scalable, high-performance digital solutions with measurable business impact.
+                    </p>
+                </div>
+
+                <!-- Carousel Outer Wrapper -->
+                <div id="csCarouselWrapper" style="max-width:1150px;margin:0 auto;position:relative;" onmouseenter="stopCsTimer()" onmouseleave="startCsTimer()">
+                    
+                    <!-- Carousel Window -->
+                    <div style="overflow:hidden;border-radius:24px;">
+                        <div id="csTrack" style="display:flex;transition:transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);width:100%;">
+                            
+                            <!-- Slide 1: Case Study 1 -->
+                            <div class="cs-slide" style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:0 var(--space-2);">
+                                <div class="grid-2" style="gap:var(--space-10);align-items:center;">
+                                    <!-- Left Side: Image Showcase -->
+                                    <div class="animate-on-scroll" style="border-radius:24px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.12);background:#ffffff;border:1px solid var(--border-light);padding:var(--space-3);text-align:center;">
+                                        <img src="images/Case_study_1.webp" alt="Custom Website Development Case Study" style="width:100%;height:auto;max-height:540px;object-fit:contain;display:block;margin:0 auto;" onerror="this.src='images/project_ecommerce.png';">
+                                    </div>
+
+                                    <!-- Right Side: Open Text Content (No Card Box) -->
+                                    <div class="animate-on-scroll delay-200">
+                                        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,0.08);color:#2563eb;border:1px solid rgba(37,99,235,0.25);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:14px;letter-spacing:0.5px;">
+                                            <span>Retail / eCommerce</span> <span style="opacity:0.4;">•</span> <span>Custom Website Development</span>
+                                        </div>
+                                        <h3 style="font-size:clamp(1.6rem, 3vw, 2.2rem);font-weight:800;color:#0f172a;line-height:1.25;margin-bottom:8px;">
+                                            Case Study 1: Custom Website Development
+                                        </h3>
+                                        <p style="font-size:var(--text-base);font-weight:600;color:#2563eb;margin-bottom:20px;font-style:italic;">
+                                            From Slow, Unmanageable Code to a Fast, Scalable eCommerce Website
+                                        </p>
+
+                                        <!-- Challenge, Solution, Result Stack -->
+                                        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px;">
+                                            <div style="display:flex;gap:12px;align-items:flex-start;">
+                                                <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:rgba(239,68,68,0.1);color:#ef4444;font-size:14px;flex-shrink:0;margin-top:2px;">🎯</span>
+                                                <div>
+                                                    <strong style="color:#0f172a;font-size:14px;">The Challenge:</strong>
+                                                    <p style="color:#475569;font-size:13.5px;line-height:1.6;margin:2px 0 0;">A growing retail business came to us with a website that had outgrown its original build — a single, massive codebase with no clear structure, making every update risky and slow. Their product gallery lacked proper pagination, forcing every visitor to load the entire catalog at once, hurting both page speed and user experience.</p>
+                                                </div>
+                                            </div>
+
+                                            <div style="display:flex;gap:12px;align-items:flex-start;">
+                                                <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:rgba(37,99,235,0.1);color:#2563eb;font-size:14px;flex-shrink:0;margin-top:2px;">⚡</span>
+                                                <div>
+                                                    <strong style="color:#0f172a;font-size:14px;">The Solution:</strong>
+                                                    <p style="color:#475569;font-size:13.5px;line-height:1.6;margin:2px 0 0;">XProwess carried out a full website redesign and code refactor, breaking the monolithic codebase into a modular, maintainable structure with organized CSS and JavaScript. We rebuilt the product gallery with clean pagination and an interactive lightbox viewer, and implemented automated deployment.</p>
+                                                </div>
+                                            </div>
+
+                                            <div style="display:flex;gap:12px;align-items:flex-start;">
+                                                <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:rgba(16,185,129,0.1);color:#10b981;font-size:14px;flex-shrink:0;margin-top:2px;">📈</span>
+                                                <div>
+                                                    <strong style="color:#0f172a;font-size:14px;">The Result:</strong>
+                                                    <p style="color:#475569;font-size:13.5px;line-height:1.6;margin:2px 0 0;">A faster-loading, easier-to-navigate eCommerce website with a maintainable codebase — giving the client the confidence to update and scale their site without breaking core functionality. The improved page structure also strengthens SEO foundation.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Services Used Pills -->
+                                        <div>
+                                            <span style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.5px;display:block;margin-bottom:8px;">Services Used:</span>
+                                            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                                                <span style="background:#f1f5f9;color:#334155;font-size:12px;font-weight:600;padding:4px 12px;border-radius:14px;border:1px solid #e2e8f0;">Website Development</span>
+                                                <span style="background:#f1f5f9;color:#334155;font-size:12px;font-weight:600;padding:4px 12px;border-radius:14px;border:1px solid #e2e8f0;">Website Redesign</span>
+                                                <span style="background:#f1f5f9;color:#334155;font-size:12px;font-weight:600;padding:4px 12px;border-radius:14px;border:1px solid #e2e8f0;">Frontend Engineering</span>
+                                                <span style="background:#f1f5f9;color:#334155;font-size:12px;font-weight:600;padding:4px 12px;border-radius:14px;border:1px solid #e2e8f0;">Deployment Automation</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: Case Study 2 -->
+                            <div class="cs-slide" style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:0 var(--space-2);">
+                                <div class="grid-2" style="gap:var(--space-10);align-items:center;">
+                                    <!-- Left Side: Image Showcase -->
+                                    <div class="animate-on-scroll" style="border-radius:24px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.12);background:#ffffff;border:1px solid var(--border-light);padding:var(--space-3);text-align:center;">
+                                        <img src="images/Case_study_2.webp" alt="Business Intelligence & Modern Analytics Case Study" style="width:100%;height:auto;max-height:540px;object-fit:contain;display:block;margin:0 auto;" onerror="this.src='images/bi_dashboard.png';">
+                                    </div>
+
+                                    <!-- Right Side: Open Text Content (No Card Box) -->
+                                    <div class="animate-on-scroll delay-200">
+                                        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(123,47,247,0.08);color:#7b2ff7;border:1px solid rgba(123,47,247,0.25);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:14px;letter-spacing:0.5px;">
+                                            <span>Supply Chain & Distribution</span> <span style="opacity:0.4;">•</span> <span>Data Warehouse & BI</span>
+                                        </div>
+                                        <h3 style="font-size:clamp(1.6rem, 3vw, 2.2rem);font-weight:800;color:#0f172a;line-height:1.25;margin-bottom:8px;">
+                                            Case Study 2: BI & Modern Analytics
+                                        </h3>
+                                        <p style="font-size:var(--text-base);font-weight:600;color:#7b2ff7;margin-bottom:20px;font-style:italic;">
+                                            Turning Fragmented Operations Data into a Real-Time Power BI Reporting System
+                                        </p>
+
+                                        <!-- Challenge, Solution, Result Stack -->
+                                        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px;">
+                                            <div style="display:flex;gap:12px;align-items:flex-start;">
+                                                <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:rgba(239,68,68,0.1);color:#ef4444;font-size:14px;flex-shrink:0;margin-top:2px;">🎯</span>
+                                                <div>
+                                                    <strong style="color:#0f172a;font-size:14px;">The Challenge:</strong>
+                                                    <p style="color:#475569;font-size:13.5px;line-height:1.6;margin:2px 0 0;">A distribution-focused business was tracking inventory, purchase orders, and shipment data across multiple disconnected systems and spreadsheets — with no single, reliable view of current operations. Teams routinely disagreed on basic numbers like inventory on hand.</p>
+                                                </div>
+                                            </div>
+
+                                            <div style="display:flex;gap:12px;align-items:flex-start;">
+                                                <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:rgba(123,47,247,0.1);color:#7b2ff7;font-size:14px;flex-shrink:0;margin-top:2px;">⚡</span>
+                                                <div>
+                                                    <strong style="color:#0f172a;font-size:14px;">The Solution:</strong>
+                                                    <p style="color:#475569;font-size:13.5px;line-height:1.6;margin:2px 0 0;">XProwess designed and built a centralized data warehouse with a proper dimensional model — consolidating purchase order, inventory, and shipment data into clean fact and dimension tables. On top of this, we developed role-specific Power BI dashboards for executive, ops, and procurement teams.</p>
+                                                </div>
+                                            </div>
+
+                                            <div style="display:flex;gap:12px;align-items:flex-start;">
+                                                <span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:rgba(16,185,129,0.1);color:#10b981;font-size:14px;flex-shrink:0;margin-top:2px;">📈</span>
+                                                <div>
+                                                    <strong style="color:#0f172a;font-size:14px;">The Result:</strong>
+                                                    <p style="color:#475569;font-size:13.5px;line-height:1.6;margin:2px 0 0;">A single, reliable reporting layer that replaced fragmented spreadsheets and disconnected exports, giving decision-makers faster visibility into inventory levels, supplier performance, and operational KPIs daily.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Services Used Pills -->
+                                        <div>
+                                            <span style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.5px;display:block;margin-bottom:8px;">Services Used:</span>
+                                            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                                                <span style="background:#f1f5f9;color:#334155;font-size:12px;font-weight:600;padding:4px 12px;border-radius:14px;border:1px solid #e2e8f0;">Data Warehouse Development</span>
+                                                <span style="background:#f1f5f9;color:#334155;font-size:12px;font-weight:600;padding:4px 12px;border-radius:14px;border:1px solid #e2e8f0;">ETL Pipeline Design</span>
+                                                <span style="background:#f1f5f9;color:#334155;font-size:12px;font-weight:600;padding:4px 12px;border-radius:14px;border:1px solid #e2e8f0;">Power BI Dashboards</span>
+                                                <span style="background:#f1f5f9;color:#334155;font-size:12px;font-weight:600;padding:4px 12px;border-radius:14px;border:1px solid #e2e8f0;">Supply Chain Analytics</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button onclick="prevCsSlide()" aria-label="Previous Case Study" style="position:absolute;top:50%;left:-20px;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:#ffffff;box-shadow:0 6px 20px rgba(0,0,0,0.15);border:1px solid #e2e8f0;color:#0f172a;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s ease;z-index:10;" onmouseenter="this.style.background='#2563eb';this.style.color='#ffffff';" onmouseleave="this.style.background='#ffffff';this.style.color='#0f172a';">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <button onclick="nextCsSlide()" aria-label="Next Case Study" style="position:absolute;top:50%;right:-20px;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:#ffffff;box-shadow:0 6px 20px rgba(0,0,0,0.15);border:1px solid #e2e8f0;color:#0f172a;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s ease;z-index:10;" onmouseenter="this.style.background='#2563eb';this.style.color='#ffffff';" onmouseleave="this.style.background='#ffffff';this.style.color='#0f172a';">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+
+                    <!-- Dot Indicators -->
+                    <div style="display:flex;justify-content:center;gap:10px;margin-top:var(--space-8);">
+                        <button onclick="goToCsSlide(0)" class="cs-dot" aria-label="Case Study 1" style="width:28px;height:10px;border-radius:10px;background:#2563eb;border:none;cursor:pointer;opacity:1;transition:all 0.3s;"></button>
+                        <button onclick="goToCsSlide(1)" class="cs-dot" aria-label="Case Study 2" style="width:12px;height:10px;border-radius:50%;background:#2563eb;border:none;cursor:pointer;opacity:0.35;transition:all 0.3s;"></button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Script for Case Studies Auto-play & Touch Swipe -->
+        <script>
+            (function() {
+                let csCurrentIndex = 0;
+                const csTrack = document.getElementById('csTrack');
+                const csDots = document.querySelectorAll('.cs-dot');
+                let csTimer = null;
+
+                window.updateCsSlider = function() {
+                    if (!csTrack) return;
+                    csTrack.style.transform = 'translateX(-' + (csCurrentIndex * 100) + '%)';
+                    if (csDots && csDots.length > 0) {
+                        csDots.forEach((dot, idx) => {
+                            dot.style.opacity = idx === csCurrentIndex ? '1' : '0.35';
+                            dot.style.width = idx === csCurrentIndex ? '28px' : '12px';
+                            dot.style.borderRadius = idx === csCurrentIndex ? '10px' : '50%';
+                        });
+                    }
+                };
+
+                window.nextCsSlide = function() {
+                    csCurrentIndex = (csCurrentIndex + 1) % 2;
+                    window.updateCsSlider();
+                };
+
+                window.prevCsSlide = function() {
+                    csCurrentIndex = (csCurrentIndex - 1 + 2) % 2;
+                    window.updateCsSlider();
+                };
+
+                window.goToCsSlide = function(index) {
+                    csCurrentIndex = index;
+                    window.updateCsSlider();
+                };
+
+                window.startCsTimer = function() {
+                    window.stopCsTimer();
+                    csTimer = setInterval(window.nextCsSlide, 6000);
+                };
+
+                window.stopCsTimer = function() {
+                    if (csTimer) clearInterval(csTimer);
+                };
+
+                // Touch Swipe Handler for Mobile
+                let csStartX = 0;
+                let csEndX = 0;
+                if (csTrack) {
+                    csTrack.addEventListener('touchstart', function(e) {
+                        csStartX = e.changedTouches[0].screenX;
+                    }, { passive: true });
+
+                    csTrack.addEventListener('touchend', function(e) {
+                        csEndX = e.changedTouches[0].screenX;
+                        if (csEndX < csStartX - 40) {
+                            window.nextCsSlide();
+                        } else if (csEndX > csStartX + 40) {
+                            window.prevCsSlide();
+                        }
+                    }, { passive: true });
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    window.startCsTimer();
+                });
+            })();
+        </script>
+
         <!-- Stats Section -->
         <section class="stats-section">
             <div class="container"><div class="stats-grid stagger-children">
