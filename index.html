@@ -395,28 +395,28 @@
         </section>
 
         <!-- Why Should You Choose XProwess? Section -->
-        <section class="section" style="position:relative;background:radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.08), transparent 55%), radial-gradient(circle at 85% 80%, rgba(123, 47, 247, 0.06), transparent 50%), #f8fafc;padding:var(--space-20) 0;overflow:hidden;">
+        <section class="section" style="position:relative;background:radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.07), transparent 55%), radial-gradient(circle at 85% 80%, rgba(123, 47, 247, 0.06), transparent 50%), var(--bg-secondary);padding:var(--space-20) 0;overflow:hidden;">
             <div class="container">
                 <div class="grid-2" style="gap:var(--space-12);align-items:center;">
-                    <!-- Left Side: Image Showcase -->
-                    <div class="animate-on-scroll" style="border-radius:24px;overflow:hidden;box-shadow:0 16px 40px rgba(37,99,235,0.15);background:linear-gradient(145deg, #ffffff, #eff6ff);border:2px solid rgba(37,99,235,0.2);padding:var(--space-4);text-align:center;">
-                        <img src="images/why-choose-us.webp" alt="Why Choose XProwess" style="width:100%;height:auto;max-height:540px;object-fit:contain;display:block;margin:0 auto;" onerror="this.src='images/team.png';">
+                    <!-- Left Side: Image Showcase (Show 100% Full Image, Uncropped) -->
+                    <div class="animate-on-scroll" style="border-radius:24px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.12);background:#ffffff;border:1px solid var(--border-light);padding:var(--space-4);text-align:center;">
+                        <img src="images/why-choose-us.webp" alt="Why Choose XProwess" style="width:100%;height:auto;max-height:600px;object-fit:contain;display:block;margin:0 auto;" onerror="this.src='images/team.png';">
                     </div>
 
-                    <!-- Right Side: Header & 3 Core Points (Blue Accent Container) -->
-                    <div class="animate-on-scroll delay-200" style="background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);border:1px solid rgba(37,99,235,0.18);border-radius:24px;padding:var(--space-8);box-shadow:0 12px 30px rgba(0,0,0,0.05);">
-                        <span class="badge" style="background:rgba(37,99,235,0.1);color:#2563eb;border:1px solid rgba(37,99,235,0.3);letter-spacing:1px;padding:6px 16px;border-radius:20px;font-weight:700;">Why Choose XProwess</span>
-                        <h2 class="section-title" style="margin-top:var(--space-3);margin-bottom:var(--space-4);font-size:clamp(1.8rem, 3.5vw, 2.5rem);">Why Should You Choose <span class="gradient-text">XProwess?</span></h2>
-                        <p style="color:var(--text-secondary);font-size:var(--text-base);line-height:var(--leading-relaxed);margin-bottom:var(--space-6);">
+                    <!-- Right Side: Header & 6 Key Points (No Cards, Simple Text List with Emojis) -->
+                    <div class="animate-on-scroll delay-200">
+                        <span class="badge" style="background:rgba(37,99,235,0.08);color:#2563eb;border:1px solid rgba(37,99,235,0.3);letter-spacing:1px;padding:6px 16px;border-radius:20px;font-weight:700;">Why Choose XProwess</span>
+                        <h2 class="section-title" style="margin-top:var(--space-3);margin-bottom:var(--space-4);">Why Should You Choose <span class="gradient-text">XProwess?</span></h2>
+                        <p style="color:var(--text-secondary);font-size:var(--text-base);line-height:var(--leading-relaxed);margin-bottom:var(--space-8);">
                             Choosing a technology partner isn't just about who can write code — it's about who understands your business, delivers reliable systems, and stays accountable long after launch. At XProwess, we combine hands-on enterprise data engineering experience with full-stack development capability, so you get one accountable team instead of juggling multiple vendors.
                         </p>
 
-                        <!-- 3 Core Points List -->
-                        <div style="display:flex;flex-direction:column;gap:var(--space-5);">
+                        <!-- 6 Key Points List -->
+                        <div style="display:flex;flex-direction:column;gap:var(--space-6);">
                             
                             <!-- Point 1 -->
-                            <div style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-3);border-radius:14px;background:rgba(37, 99, 235, 0.04);border:1px solid rgba(37, 99, 235, 0.1);transition:all 0.3s ease;">
-                                <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg, #2563eb, #1d4ed8);display:flex;align-items:center;justify-content:center;font-size:22px;color:#ffffff;flex-shrink:0;box-shadow:0 4px 12px rgba(37,99,235,0.3);">🛠️</div>
+                            <div style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-3);border-radius:14px;transition:background 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                                <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 4px 10px rgba(37,99,235,0.12);">🛠️</div>
                                 <div>
                                     <h4 style="font-size:var(--text-base);font-weight:700;color:#0f172a;margin-bottom:4px;">Hands-On Enterprise Experience</h4>
                                     <p style="font-size:var(--text-sm);color:#475569;line-height:1.6;margin:0;">Real, in-production experience architecting enterprise data warehouses, ETL pipelines, and Power BI reporting systems for large-scale platforms — not just theoretical know-how.</p>
@@ -424,8 +424,8 @@
                             </div>
 
                             <!-- Point 2 -->
-                            <div style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-3);border-radius:14px;background:rgba(37, 99, 235, 0.04);border:1px solid rgba(37, 99, 235, 0.1);transition:all 0.3s ease;">
-                                <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg, #2563eb, #1d4ed8);display:flex;align-items:center;justify-content:center;font-size:22px;color:#ffffff;flex-shrink:0;box-shadow:0 4px 12px rgba(37,99,235,0.3);">🌐</div>
+                            <div style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-3);border-radius:14px;transition:background 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                                <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 4px 10px rgba(37,99,235,0.12);">🌐</div>
                                 <div>
                                     <h4 style="font-size:var(--text-base);font-weight:700;color:#0f172a;margin-bottom:4px;">Full-Stack, End-to-End Delivery</h4>
                                     <p style="font-size:var(--text-sm);color:#475569;line-height:1.6;margin:0;">From data engineering and BI to web development, mobile apps, AI/ML, and cloud infrastructure — we build complete digital solutions under one roof, so your systems actually work together.</p>
@@ -433,229 +433,46 @@
                             </div>
 
                             <!-- Point 3 -->
-                            <div style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-3);border-radius:14px;background:rgba(37, 99, 235, 0.04);border:1px solid rgba(37, 99, 235, 0.1);transition:all 0.3s ease;">
-                                <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg, #2563eb, #1d4ed8);display:flex;align-items:center;justify-content:center;font-size:22px;color:#ffffff;flex-shrink:0;box-shadow:0 4px 12px rgba(37,99,235,0.3);">👨‍💻</div>
+                            <div style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-3);border-radius:14px;transition:background 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                                <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 4px 10px rgba(37,99,235,0.12);">👨‍💻</div>
                                 <div>
                                     <h4 style="font-size:var(--text-base);font-weight:700;color:#0f172a;margin-bottom:4px;">Direct Access to Senior Engineers</h4>
                                     <p style="font-size:var(--text-sm);color:#475569;line-height:1.6;margin:0;">No hand-offs to junior teams or account managers relaying messages — you work directly with the engineers building your solution, for faster decisions and fewer miscommunications.</p>
                                 </div>
                             </div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Moving Case Studies Carousel Section -->
-        <style>
-            .cs-arrow-btn {
-                width: 44px;
-                height: 44px;
-                border-radius: 50%;
-                background: #ffffff;
-                border: 1px solid var(--border-light);
-                color: var(--text-primary);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                box-shadow: var(--shadow-md);
-                transition: all 0.3s ease;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 10;
-            }
-            .cs-arrow-btn:hover {
-                background: var(--color-primary);
-                color: #ffffff;
-                border-color: var(--color-primary);
-                transform: translateY(-50%) scale(1.08);
-            }
-            .cs-arrow-prev { left: -16px; }
-            .cs-arrow-next { right: -16px; }
-            
-            @media (max-width: 768px) {
-                #caseStudyCarousel { padding: 0 16px !important; }
-                .cs-arrow-prev { left: -8px !important; width: 36px; height: 36px; }
-                .cs-arrow-next { right: -8px !important; width: 36px; height: 36px; }
-                .cs-slide-inner { padding: var(--space-6) var(--space-4) !important; }
-                .cs-grid { grid-template-columns: 1fr !important; gap: var(--space-6) !important; }
-            }
-        </style>
-        <section class="section" style="position:relative;background:linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);padding:var(--space-20) 0;overflow:hidden;">
-            <div class="container" style="position:relative;z-index:2;">
-                
-                <!-- Section Header -->
-                <div class="section-header text-center animate-on-scroll" style="margin-bottom:var(--space-12);">
-                    <span class="badge badge-purple" style="letter-spacing:1px;">// Real-World Impact</span>
-                    <h2 class="section-title" style="margin-top:var(--space-3);">Featured <span class="gradient-text">Case Studies</span></h2>
-                    <p class="section-subtitle" style="max-width:750px;margin:var(--space-4) auto 0;">Deep dive into how XProwess solves complex engineering, web development, and data architecture challenges.</p>
-                </div>
-
-                <!-- Case Studies Carousel Wrapper -->
-                <div id="caseStudyCarousel" style="max-width:1100px;margin:0 auto;position:relative;padding:0 30px;" onmouseenter="stopCaseStudySlider()" onmouseleave="startCaseStudySlider()">
-                    
-                    <!-- Track Container -->
-                    <div style="overflow:hidden;border-radius:24px;box-shadow:0 20px 45px rgba(0,0,0,0.08);border:1px solid var(--border-light);background:#ffffff;">
-                        <div id="caseStudyTrack" style="display:flex;transition:transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);width:100%;">
-                            
-                            <!-- Case Study 1 -->
-                            <div class="cs-slide-inner" style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:var(--space-10) var(--space-8);background:#ffffff;">
-                                <div class="cs-grid" style="display:grid;grid-template-columns:1fr 1.25fr;gap:var(--space-10);align-items:center;">
-                                    <!-- Image Left -->
-                                    <div style="border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.1);border:1px solid var(--border-light);background:#f8fafc;max-height:420px;display:flex;align-items:center;justify-content:center;">
-                                        <img src="images/Case_study_1.webp" alt="Custom Website Development Case Study" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.src='images/project_ecommerce.png';">
-                                    </div>
-                                    <!-- Content Right -->
-                                    <div>
-                                        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
-                                            <span style="background:rgba(37,99,235,0.1);color:#2563eb;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;">Custom Website Development</span>
-                                            <span style="background:rgba(123,47,247,0.1);color:#7b2ff7;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;">Retail / eCommerce</span>
-                                        </div>
-                                        <h3 style="font-size:clamp(1.3rem, 2.5vw, 1.75rem);font-weight:800;color:#0f172a;line-height:1.35;margin-bottom:16px;">
-                                            From Slow, Unmanageable Code to a Fast, Scalable eCommerce Website
-                                        </h3>
-                                        
-                                        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px;font-size:14px;line-height:1.6;">
-                                            <div>
-                                                <strong style="color:#2563eb;display:inline-flex;align-items:center;gap:4px;">🎯 The Challenge:</strong>
-                                                <span style="color:#475569;">A growing retail business came to us with a website that had outgrown its original build — a single, massive codebase with no clear structure, making every update risky and slow. Their product gallery lacked proper pagination, forcing every visitor to load the entire catalog at once, hurting page speed & SEO.</span>
-                                            </div>
-                                            <div>
-                                                <strong style="color:#7b2ff7;display:inline-flex;align-items:center;gap:4px;">⚙️ The Solution:</strong>
-                                                <span style="color:#475569;">XProwess carried out a full redesign and refactor into a modular structure with organized CSS/JS. We rebuilt the product gallery with clean pagination and an interactive lightbox viewer, and implemented automated deployment for instant zero-downtime updates.</span>
-                                            </div>
-                                            <div>
-                                                <strong style="color:#16a34a;display:inline-flex;align-items:center;gap:4px;">📈 The Result:</strong>
-                                                <span style="color:#475569;">A faster-loading, easier-to-navigate eCommerce website with a maintainable codebase — giving the client confidence to scale without breaking core functionality.</span>
-                                            </div>
-                                        </div>
-
-                                        <div style="display:flex;gap:6px;flex-wrap:wrap;border-top:1px solid #e2e8f0;padding-top:14px;">
-                                            <span style="font-size:11px;font-weight:600;background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:12px;">Website Development</span>
-                                            <span style="font-size:11px;font-weight:600;background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:12px;">Website Redesign</span>
-                                            <span style="font-size:11px;font-weight:600;background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:12px;">Frontend Engineering</span>
-                                            <span style="font-size:11px;font-weight:600;background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:12px;">Deployment Automation</span>
-                                        </div>
-                                    </div>
+                            <!-- Point 4 -->
+                            <div style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-3);border-radius:14px;transition:background 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                                <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 4px 10px rgba(37,99,235,0.12);">🚀</div>
+                                <div>
+                                    <h4 style="font-size:var(--text-base);font-weight:700;color:#0f172a;margin-bottom:4px;">Modern, Scalable Technology</h4>
+                                    <p style="font-size:var(--text-sm);color:#475569;line-height:1.6;margin:0;">We build on current, production-proven technology — cloud-native architecture, modern data platforms, and scalable frameworks — so your systems grow with your business instead of needing a rebuild in two years.</p>
                                 </div>
                             </div>
 
-                            <!-- Case Study 2 -->
-                            <div class="cs-slide-inner" style="min-width:100%;flex-shrink:0;box-sizing:border-box;padding:var(--space-10) var(--space-8);background:#ffffff;">
-                                <div class="cs-grid" style="display:grid;grid-template-columns:1fr 1.25fr;gap:var(--space-10);align-items:center;">
-                                    <!-- Image Left -->
-                                    <div style="border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.1);border:1px solid var(--border-light);background:#f8fafc;max-height:420px;display:flex;align-items:center;justify-content:center;">
-                                        <img src="images/Case_study_2.webp" alt="Business Intelligence Case Study" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.src='images/Dashboard2.webp';">
-                                    </div>
-                                    <!-- Content Right -->
-                                    <div>
-                                        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
-                                            <span style="background:rgba(37,99,235,0.1);color:#2563eb;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;">Data Warehouse & BI</span>
-                                            <span style="background:rgba(123,47,247,0.1);color:#7b2ff7;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;">Supply Chain & Distribution</span>
-                                        </div>
-                                        <h3 style="font-size:clamp(1.3rem, 2.5vw, 1.75rem);font-weight:800;color:#0f172a;line-height:1.35;margin-bottom:16px;">
-                                            Turning Fragmented Operations Data into a Real-Time Power BI Reporting System
-                                        </h3>
-                                        
-                                        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px;font-size:14px;line-height:1.6;">
-                                            <div>
-                                                <strong style="color:#2563eb;display:inline-flex;align-items:center;gap:4px;">🎯 The Challenge:</strong>
-                                                <span style="color:#475569;">A distribution-focused business was tracking inventory, purchase orders, and shipment data across disconnected systems and spreadsheets — with no single view of operations. Teams routinely disagreed on basic numbers like inventory on hand.</span>
-                                            </div>
-                                            <div>
-                                                <strong style="color:#7b2ff7;display:inline-flex;align-items:center;gap:4px;">⚙️ The Solution:</strong>
-                                                <span style="color:#475569;">XProwess designed and built a centralized data warehouse with a dimensional model — consolidating purchase orders, inventory, and shipment data into fact & dimension tables. We developed role-specific Power BI dashboards (Executive, Operations, Procurement).</span>
-                                            </div>
-                                            <div>
-                                                <strong style="color:#16a34a;display:inline-flex;align-items:center;gap:4px;">📈 The Result:</strong>
-                                                <span style="color:#475569;">A single, reliable reporting layer that replaced fragmented spreadsheets, giving decision-makers faster visibility into inventory levels, supplier performance, and operational KPIs daily.</span>
-                                            </div>
-                                        </div>
+                            <!-- Point 5 -->
+                            <div style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-3);border-radius:14px;transition:background 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                                <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 4px 10px rgba(37,99,235,0.12);">💬</div>
+                                <div>
+                                    <h4 style="font-size:var(--text-base);font-weight:700;color:#0f172a;margin-bottom:4px;">Transparent Communication</h4>
+                                    <p style="font-size:var(--text-sm);color:#475569;line-height:1.6;margin:0;">Clear timelines, honest scoping, and regular updates — no inflated promises, no surprises at delivery.</p>
+                                </div>
+                            </div>
 
-                                        <div style="display:flex;gap:6px;flex-wrap:wrap;border-top:1px solid #e2e8f0;padding-top:14px;">
-                                            <span style="font-size:11px;font-weight:600;background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:12px;">Data Warehouse Development</span>
-                                            <span style="font-size:11px;font-weight:600;background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:12px;">ETL Pipeline Design</span>
-                                            <span style="font-size:11px;font-weight:600;background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:12px;">Power BI Dashboard</span>
-                                            <span style="font-size:11px;font-weight:600;background:#f1f5f9;color:#64748b;padding:3px 10px;border-radius:12px;">Supply Chain Analytics</span>
-                                        </div>
-                                    </div>
+                            <!-- Point 6 -->
+                            <div style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-3);border-radius:14px;transition:background 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                                <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 4px 10px rgba(37,99,235,0.12);">🔒</div>
+                                <div>
+                                    <h4 style="font-size:var(--text-base);font-weight:700;color:#0f172a;margin-bottom:4px;">Data-First Approach</h4>
+                                    <p style="font-size:var(--text-sm);color:#475569;line-height:1.6;margin:0;">Every solution we build — whether it's a website, an app, or a dashboard — is designed with clean, reliable data architecture underneath it, because systems built on messy data break down as they scale.</p>
                                 </div>
                             </div>
 
                         </div>
                     </div>
-
-                    <!-- Carousel Controls: Arrows -->
-                    <button onclick="prevCaseStudySlide()" aria-label="Previous Case Study" class="cs-arrow-btn cs-arrow-prev">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
-                    </button>
-                    <button onclick="nextCaseStudySlide()" aria-label="Next Case Study" class="cs-arrow-btn cs-arrow-next">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
-                    </button>
-
-                    <!-- Dot Indicators -->
-                    <div style="display:flex;justify-content:center;gap:8px;margin-top:var(--space-6);">
-                        <button onclick="goToCaseStudySlide(0)" class="cs-dot" aria-label="Case Study 1" style="width:28px;height:12px;border-radius:10px;background:#2563eb;border:none;cursor:pointer;opacity:1;transition:all 0.3s;"></button>
-                        <button onclick="goToCaseStudySlide(1)" class="cs-dot" aria-label="Case Study 2" style="width:12px;height:12px;border-radius:50%;background:#2563eb;border:none;cursor:pointer;opacity:0.35;transition:all 0.3s;"></button>
-                    </div>
-
                 </div>
             </div>
         </section>
-
-        <script>
-            let currentCaseStudyIndex = 0;
-            let caseStudyInterval;
-
-            function updateCaseStudySlider() {
-                const track = document.getElementById('caseStudyTrack');
-                const dots = document.querySelectorAll('.cs-dot');
-                if (!track) return;
-                track.style.transform = `translateX(-${currentCaseStudyIndex * 100}%)`;
-                dots.forEach((dot, index) => {
-                    if (index === currentCaseStudyIndex) {
-                        dot.style.opacity = '1';
-                        dot.style.width = '28px';
-                        dot.style.borderRadius = '10px';
-                    } else {
-                        dot.style.opacity = '0.35';
-                        dot.style.width = '12px';
-                        dot.style.borderRadius = '50%';
-                    }
-                });
-            }
-
-            function nextCaseStudySlide() {
-                currentCaseStudyIndex = (currentCaseStudyIndex + 1) % 2;
-                updateCaseStudySlider();
-            }
-
-            function prevCaseStudySlide() {
-                currentCaseStudyIndex = (currentCaseStudyIndex - 1 + 2) % 2;
-                updateCaseStudySlider();
-            }
-
-            function goToCaseStudySlide(index) {
-                currentCaseStudyIndex = index;
-                updateCaseStudySlider();
-            }
-
-            function startCaseStudySlider() {
-                stopCaseStudySlider();
-                caseStudyInterval = setInterval(nextCaseStudySlide, 6000);
-            }
-
-            function stopCaseStudySlider() {
-                if (caseStudyInterval) clearInterval(caseStudyInterval);
-            }
-
-            document.addEventListener('DOMContentLoaded', () => {
-                startCaseStudySlider();
-            });
-        </script>
 
         <!-- Stats Section -->
         <section class="stats-section">
