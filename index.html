@@ -299,79 +299,86 @@
                 <div class="text-center" style="margin-top:var(--space-10);"><a href="pages/portfolio.html" class="btn btn-secondary btn-lg">View All Projects <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
             </div>
         <!-- Industry Solutions and Expertise (Company Benefits) Section -->
-        <section class="section" style="position:relative;background:radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.08), transparent 55%), radial-gradient(circle at 90% 80%, rgba(123, 47, 247, 0.07), transparent 55%), var(--bg-secondary);padding:var(--space-20) 0;overflow:hidden;">
+        <section class="section" style="position:relative;background:radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.08), transparent 55%), radial-gradient(circle at 90% 80%, rgba(123, 47, 247, 0.07), transparent 55%), #ffffff;padding:var(--space-20) 0;overflow:hidden;">
             <div class="container">
                 <!-- Section Header -->
                 <div class="section-header text-center animate-on-scroll" style="max-width:900px;margin:0 auto var(--space-12);">
                     <span class="badge badge-purple" style="letter-spacing:1px;">// Company Benefits</span>
                     <h2 class="section-title" style="margin-top:var(--space-3);">Industry Solutions <span class="gradient-text">& Expertise</span></h2>
-                    <p class="section-subtitle" style="max-width:800px;margin:var(--space-4) auto 0;color:var(--text-secondary);font-size:var(--text-base);line-height:var(--leading-relaxed);">
+                    <p class="section-subtitle" style="max-width:850px;margin:var(--space-4) auto 0;color:var(--text-secondary);font-size:var(--text-base);line-height:var(--leading-relaxed);">
                         Every industry runs on different data, different rules, and different priorities. At XProwess, we deliver custom software development, data engineering, and digital solutions tailored to your industry — combining hands-on domain experience with modern technology to help businesses grow, streamline operations, and improve customer experience.
                     </p>
                 </div>
 
                 <!-- Showcase Banner Image (Company_benifits.webp) -->
-                <div class="animate-on-scroll" style="border-radius:24px;overflow:hidden;box-shadow:var(--shadow-xl);margin-bottom:var(--space-16);background:var(--bg-primary);border:1px solid var(--border-light);">
+                <div class="animate-on-scroll" style="border-radius:24px;overflow:hidden;box-shadow:0 12px 35px rgba(0,0,0,0.12);margin-bottom:var(--space-16);background:#ffffff;">
                     <img src="images/Company_benifits.webp" alt="XProwess Company Benefits & Industry Solutions" style="width:100%;height:auto;max-height:520px;object-fit:cover;display:block;" onerror="this.src='images/web_dev_showcase.png';">
                 </div>
 
-                <!-- 7 Industry Solutions Grid -->
-                <div class="grid-3 stagger-children" style="gap:var(--space-6);">
+                <!-- 7 Industry Solutions (Open Grid Format without Card Boxes) -->
+                <div class="grid-2 stagger-children" style="gap:var(--space-8) var(--space-10);">
                     
                     <!-- 1. Insurance & InsurTech Solutions -->
-                    <div class="feature-card animate-on-scroll" style="position:relative;overflow:hidden;background:var(--bg-primary);transition:all 0.35s ease;" onmouseenter="this.style.background='linear-gradient(145deg, #f0f6ff, #e8f0fe)';this.style.borderColor='rgba(37,99,235,0.45)';this.style.transform='translateY(-6px)';" onmouseleave="this.style.background='var(--bg-primary)';this.style.borderColor='';this.style.transform='';">
-                        <span style="position:absolute;bottom:-10px;right:-5px;font-size:64px;opacity:0.12;pointer-events:none;user-select:none;">🛡️</span>
-                        <div class="feature-card-icon" style="position:relative;z-index:1;"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-                        <h3 style="position:relative;z-index:1;font-size:var(--text-lg);font-weight:700;">Insurance & InsurTech Solutions</h3>
-                        <p style="position:relative;z-index:1;font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-relaxed);">Enterprise insurance data warehouse development, policy and claims data pipelines, and BI reporting systems built for the accuracy and audit rigor the insurance industry demands.</p>
+                    <div class="animate-on-scroll" style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-4);border-radius:16px;transition:all 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                        <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;box-shadow:0 4px 12px rgba(37,99,235,0.15);">🛡️</div>
+                        <div>
+                            <h3 style="font-size:var(--text-lg);font-weight:700;color:#0f172a;margin-bottom:6px;">Insurance & InsurTech Solutions</h3>
+                            <p style="font-size:var(--text-sm);color:#475569;line-height:1.65;margin:0;">Enterprise insurance data warehouse development, policy and claims data pipelines, and BI reporting systems built for the accuracy and audit rigor the insurance industry demands.</p>
+                        </div>
                     </div>
 
                     <!-- 2. Data Engineering & Business Intelligence Solutions -->
-                    <div class="feature-card animate-on-scroll" style="position:relative;overflow:hidden;background:var(--bg-primary);transition:all 0.35s ease;" onmouseenter="this.style.background='linear-gradient(145deg, #f0f6ff, #e8f0fe)';this.style.borderColor='rgba(37,99,235,0.45)';this.style.transform='translateY(-6px)';" onmouseleave="this.style.background='var(--bg-primary)';this.style.borderColor='';this.style.transform='';">
-                        <span style="position:absolute;bottom:-10px;right:-5px;font-size:64px;opacity:0.12;pointer-events:none;user-select:none;">📊</span>
-                        <div class="feature-card-icon" style="position:relative;z-index:1;"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
-                        <h3 style="position:relative;z-index:1;font-size:var(--text-lg);font-weight:700;">Data Engineering & BI Solutions</h3>
-                        <p style="position:relative;z-index:1;font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-relaxed);">Data warehouse design, ETL/ELT pipeline development, and Power BI dashboard development that turn scattered business data into a single source of truth — for teams that need to act on numbers, not just view them.</p>
+                    <div class="animate-on-scroll" style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-4);border-radius:16px;transition:all 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                        <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;box-shadow:0 4px 12px rgba(37,99,235,0.15);">📊</div>
+                        <div>
+                            <h3 style="font-size:var(--text-lg);font-weight:700;color:#0f172a;margin-bottom:6px;">Data Engineering & BI Solutions</h3>
+                            <p style="font-size:var(--text-sm);color:#475569;line-height:1.65;margin:0;">Data warehouse design, ETL/ELT pipeline development, and Power BI dashboard development that turn scattered business data into a single source of truth — for teams that need to act on numbers, not just view them.</p>
+                        </div>
                     </div>
 
                     <!-- 3. Finance & Banking Software Solutions -->
-                    <div class="feature-card animate-on-scroll" style="position:relative;overflow:hidden;background:var(--bg-primary);transition:all 0.35s ease;" onmouseenter="this.style.background='linear-gradient(145deg, #f0f6ff, #e8f0fe)';this.style.borderColor='rgba(37,99,235,0.45)';this.style.transform='translateY(-6px)';" onmouseleave="this.style.background='var(--bg-primary)';this.style.borderColor='';this.style.transform='';">
-                        <span style="position:absolute;bottom:-10px;right:-5px;font-size:64px;opacity:0.12;pointer-events:none;user-select:none;">🏦</span>
-                        <div class="feature-card-icon" style="position:relative;z-index:1;"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
-                        <h3 style="position:relative;z-index:1;font-size:var(--text-lg);font-weight:700;">Finance & Banking Software Solutions</h3>
-                        <p style="position:relative;z-index:1;font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-relaxed);">Secure financial reporting systems, reconciliation dashboards, and fintech data pipelines built to meet accuracy, security, and compliance standards.</p>
+                    <div class="animate-on-scroll" style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-4);border-radius:16px;transition:all 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                        <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;box-shadow:0 4px 12px rgba(37,99,235,0.15);">🏦</div>
+                        <div>
+                            <h3 style="font-size:var(--text-lg);font-weight:700;color:#0f172a;margin-bottom:6px;">Finance & Banking Software Solutions</h3>
+                            <p style="font-size:var(--text-sm);color:#475569;line-height:1.65;margin:0;">Secure financial reporting systems, reconciliation dashboards, and fintech data pipelines built to meet accuracy, security, and compliance standards.</p>
+                        </div>
                     </div>
 
                     <!-- 4. Retail & eCommerce Development -->
-                    <div class="feature-card animate-on-scroll" style="position:relative;overflow:hidden;background:var(--bg-primary);transition:all 0.35s ease;" onmouseenter="this.style.background='linear-gradient(145deg, #f0f6ff, #e8f0fe)';this.style.borderColor='rgba(37,99,235,0.45)';this.style.transform='translateY(-6px)';" onmouseleave="this.style.background='var(--bg-primary)';this.style.borderColor='';this.style.transform='';">
-                        <span style="position:absolute;bottom:-10px;right:-5px;font-size:64px;opacity:0.12;pointer-events:none;user-select:none;">🛒</span>
-                        <div class="feature-card-icon" style="position:relative;z-index:1;"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
-                        <h3 style="position:relative;z-index:1;font-size:var(--text-lg);font-weight:700;">Retail & eCommerce Development</h3>
-                        <p style="position:relative;z-index:1;font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-relaxed);">Custom eCommerce website development, secure payment integration, and inventory and sales analytics dashboards that scale as your business grows.</p>
+                    <div class="animate-on-scroll" style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-4);border-radius:16px;transition:all 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                        <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;box-shadow:0 4px 12px rgba(37,99,235,0.15);">🛒</div>
+                        <div>
+                            <h3 style="font-size:var(--text-lg);font-weight:700;color:#0f172a;margin-bottom:6px;">Retail & eCommerce Development</h3>
+                            <p style="font-size:var(--text-sm);color:#475569;line-height:1.65;margin:0;">Custom eCommerce website development, secure payment integration, and inventory and sales analytics dashboards that scale as your business grows.</p>
+                        </div>
                     </div>
 
                     <!-- 5. Healthcare Software Development -->
-                    <div class="feature-card animate-on-scroll" style="position:relative;overflow:hidden;background:var(--bg-primary);transition:all 0.35s ease;" onmouseenter="this.style.background='linear-gradient(145deg, #f0f6ff, #e8f0fe)';this.style.borderColor='rgba(37,99,235,0.45)';this.style.transform='translateY(-6px)';" onmouseleave="this.style.background='var(--bg-primary)';this.style.borderColor='';this.style.transform='';">
-                        <span style="position:absolute;bottom:-10px;right:-5px;font-size:64px;opacity:0.12;pointer-events:none;user-select:none;">🏥</span>
-                        <div class="feature-card-icon" style="position:relative;z-index:1;"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-                        <h3 style="position:relative;z-index:1;font-size:var(--text-lg);font-weight:700;">Healthcare Software Development</h3>
-                        <p style="position:relative;z-index:1;font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-relaxed);">Patient management systems, appointment scheduling platforms, and healthcare data solutions designed with compliance and data privacy in mind.</p>
+                    <div class="animate-on-scroll" style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-4);border-radius:16px;transition:all 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                        <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;box-shadow:0 4px 12px rgba(37,99,235,0.15);">🏥</div>
+                        <div>
+                            <h3 style="font-size:var(--text-lg);font-weight:700;color:#0f172a;margin-bottom:6px;">Healthcare Software Development</h3>
+                            <p style="font-size:var(--text-sm);color:#475569;line-height:1.65;margin:0;">Patient management systems, appointment scheduling platforms, and healthcare data solutions designed with compliance and data privacy in mind.</p>
+                        </div>
                     </div>
 
                     <!-- 6. Technology & SaaS Development -->
-                    <div class="feature-card animate-on-scroll" style="position:relative;overflow:hidden;background:var(--bg-primary);transition:all 0.35s ease;" onmouseenter="this.style.background='linear-gradient(145deg, #f0f6ff, #e8f0fe)';this.style.borderColor='rgba(37,99,235,0.45)';this.style.transform='translateY(-6px)';" onmouseleave="this.style.background='var(--bg-primary)';this.style.borderColor='';this.style.transform='';">
-                        <span style="position:absolute;bottom:-10px;right:-5px;font-size:64px;opacity:0.12;pointer-events:none;user-select:none;">💻</span>
-                        <div class="feature-card-icon" style="position:relative;z-index:1;"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-                        <h3 style="position:relative;z-index:1;font-size:var(--text-lg);font-weight:700;">Technology & SaaS Development</h3>
-                        <p style="position:relative;z-index:1;font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-relaxed);">Custom software development, SaaS platforms, and business management tools for technology companies that need to move fast without compromising data quality.</p>
+                    <div class="animate-on-scroll" style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-4);border-radius:16px;transition:all 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                        <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;box-shadow:0 4px 12px rgba(37,99,235,0.15);">💻</div>
+                        <div>
+                            <h3 style="font-size:var(--text-lg);font-weight:700;color:#0f172a;margin-bottom:6px;">Technology & SaaS Development</h3>
+                            <p style="font-size:var(--text-sm);color:#475569;line-height:1.65;margin:0;">Custom software development, SaaS platforms, and business management tools for technology companies that need to move fast without compromising data quality.</p>
+                        </div>
                     </div>
 
                     <!-- 7. Real Estate Software Solutions -->
-                    <div class="feature-card animate-on-scroll" style="position:relative;overflow:hidden;background:var(--bg-primary);transition:all 0.35s ease;" onmouseenter="this.style.background='linear-gradient(145deg, #f0f6ff, #e8f0fe)';this.style.borderColor='rgba(37,99,235,0.45)';this.style.transform='translateY(-6px)';" onmouseleave="this.style.background='var(--bg-primary)';this.style.borderColor='';this.style.transform='';">
-                        <span style="position:absolute;bottom:-10px;right:-5px;font-size:64px;opacity:0.12;pointer-events:none;user-select:none;">🏢</span>
-                        <div class="feature-card-icon" style="position:relative;z-index:1;"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-                        <h3 style="position:relative;z-index:1;font-size:var(--text-lg);font-weight:700;">Real Estate Software Solutions</h3>
-                        <p style="position:relative;z-index:1;font-size:var(--text-sm);color:var(--text-secondary);line-height:var(--leading-relaxed);">Real estate websites, CRM systems, and property management platforms that simplify listings, client communication, and deal tracking.</p>
+                    <div class="animate-on-scroll" style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-4);border-radius:16px;transition:all 0.3s ease;" onmouseenter="this.style.background='rgba(37, 99, 235, 0.05)';" onmouseleave="this.style.background='transparent';">
+                        <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg, rgba(37,99,235,0.12), rgba(123,47,247,0.12));display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;box-shadow:0 4px 12px rgba(37,99,235,0.15);">🏢</div>
+                        <div>
+                            <h3 style="font-size:var(--text-lg);font-weight:700;color:#0f172a;margin-bottom:6px;">Real Estate Software Solutions</h3>
+                            <p style="font-size:var(--text-sm);color:#475569;line-height:1.65;margin:0;">Real estate websites, CRM systems, and property management platforms that simplify listings, client communication, and deal tracking.</p>
+                        </div>
                     </div>
 
                 </div>
