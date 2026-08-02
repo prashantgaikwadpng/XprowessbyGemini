@@ -50,6 +50,24 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Building a Modern Supply Chain Data Warehouse: How Power BI Turns Raw Data into Real Decisions",
+      "description": "Learn how a well-designed data warehouse combined with Power BI dashboards helps supply chain teams cut costs, reduce stockouts, and make faster decisions.",
+      "author": {
+        "@type": "Organization",
+        "name": "Xprowess Infotech Pvt. Ltd."
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Xprowess Infotech Pvt. Ltd.",
+        "url": "https://www.xprowess.com"
+      },
+      "mainEntityOfPage": "https://www.xprowess.com/pages/bi-solutions.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [{
         "@type": "ListItem",
@@ -154,6 +172,169 @@
                     <div class="animate-on-scroll delay-200" style="border-radius:var(--radius-2xl);overflow:hidden;box-shadow:var(--shadow-xl);">
                         <img src="../images/bi_dashboard.png" alt="BI Dashboard" style="width:100%;height:350px;object-fit:cover;">
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supply Chain Data Warehouse & Power BI Guide Section -->
+        <section class="section" style="position:relative;background:linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);padding:var(--space-20) 0;">
+            <div class="container" style="max-width:1100px;">
+                <!-- Article Header -->
+                <div class="animate-on-scroll text-center" style="max-width:900px;margin:0 auto var(--space-12);">
+                    <span class="badge badge-purple" style="margin-bottom:var(--space-4);">Supply Chain Analytics Blueprint</span>
+                    <h2 class="section-title" style="font-size:clamp(2rem, 3.5vw, 3rem);line-height:1.2;margin-bottom:var(--space-6);">
+                        Building a Modern Supply Chain Data Warehouse: <span class="gradient-text">How Power BI Turns Raw Data into Real Decisions</span>
+                    </h2>
+                    <p style="color:var(--text-secondary);font-size:var(--text-lg);line-height:var(--leading-relaxed);">
+                        Every supply chain generates a flood of data — purchase orders, shipment records, warehouse inventory counts, vendor performance logs, freight costs, and demand forecasts. The problem isn't a lack of data. It's that this data usually lives in five different systems that don't talk to each other: an ERP, a WMS, a handful of spreadsheets, a vendor portal, and someone's inbox.
+                    </p>
+                </div>
+
+                <!-- Intro Card with Image -->
+                <div class="grid-2 animate-on-scroll" style="gap:var(--space-12);align-items:center;margin-bottom:var(--space-16);background:var(--bg-primary);border:1px solid var(--border-light);border-radius:24px;padding:var(--space-8);box-shadow:var(--shadow-lg);">
+                    <div>
+                        <p style="color:var(--text-secondary);line-height:var(--leading-relaxed);margin-bottom:var(--space-4);font-size:var(--text-base);">
+                            A data warehouse (DW) is what turns that scattered data into a single source of truth. Power BI is what turns that source of truth into decisions people can actually act on. Together, they're one of the highest-ROI investments a supply chain team can make — and one of the most misunderstood.
+                        </p>
+                        <p style="color:var(--text-secondary);line-height:var(--leading-relaxed);font-size:var(--text-base);">
+                            This guide breaks down what a supply chain data warehouse actually looks like, the KPIs worth tracking, and how to design Power BI dashboards that operations teams will actually open every morning.
+                        </p>
+                    </div>
+                    <div style="border-radius:18px;overflow:hidden;box-shadow:var(--shadow-md);">
+                        <img src="../images/warehouse-supply-chain.webp" alt="Supply Chain Data Warehouse Operations" style="width:100%;height:300px;object-fit:cover;" onerror="this.src='../images/bi_dashboard.png';">
+                    </div>
+                </div>
+
+                <!-- Section: Why Supply Chains Specifically Need a Data Warehouse -->
+                <div class="animate-on-scroll" style="margin-bottom:var(--space-16);">
+                    <div style="text-align:center;margin-bottom:var(--space-8);">
+                        <span class="badge">Problem Solved</span>
+                        <h3 style="font-size:var(--text-2xl);font-weight:700;margin-top:var(--space-3);">Why Supply Chains Specifically Need a Data Warehouse</h3>
+                        <p style="color:var(--text-secondary);max-width:700px;margin:var(--space-2) auto 0;">Supply chain data has unique characteristics that cause spreadsheets and single-system reporting to fall apart quickly:</p>
+                    </div>
+                    <div class="grid-2" style="gap:var(--space-6);">
+                        <div style="background:var(--bg-primary);border:1px solid var(--border-light);border-radius:20px;padding:var(--space-6);box-shadow:var(--shadow-sm);transition:all 0.3s ease;" onmouseenter="this.style.borderColor='#2563eb';this.style.boxShadow='0 10px 25px rgba(37,99,235,0.1)';" onmouseleave="this.style.borderColor='';this.style.boxShadow='var(--shadow-sm)';">
+                            <div style="font-size:24px;margin-bottom:8px;">🧩</div>
+                            <h4 style="font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin-bottom:8px;">Multiple Sources of Truth</h4>
+                            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:var(--leading-relaxed);">Inventory counts live in the WMS, purchase data in the ERP, shipment tracking with a 3PL or carrier API, and supplier scorecards in yet another tool.</p>
+                        </div>
+                        <div style="background:var(--bg-primary);border:1px solid var(--border-light);border-radius:20px;padding:var(--space-6);box-shadow:var(--shadow-sm);transition:all 0.3s ease;" onmouseenter="this.style.borderColor='#2563eb';this.style.boxShadow='0 10px 25px rgba(37,99,235,0.1)';" onmouseleave="this.style.borderColor='';this.style.boxShadow='var(--shadow-sm)';">
+                            <div style="font-size:24px;margin-bottom:8px;">⏱️</div>
+                            <h4 style="font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin-bottom:8px;">Time Sensitivity</h4>
+                            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:var(--leading-relaxed);">A stockout alert that's 24 hours late is close to useless. Decisions need near-real-time or daily-refreshed data, not a monthly export.</p>
+                        </div>
+                        <div style="background:var(--bg-primary);border:1px solid var(--border-light);border-radius:20px;padding:var(--space-6);box-shadow:var(--shadow-sm);transition:all 0.3s ease;" onmouseenter="this.style.borderColor='#2563eb';this.style.boxShadow='0 10px 25px rgba(37,99,235,0.1)';" onmouseleave="this.style.borderColor='';this.style.boxShadow='var(--shadow-sm)';">
+                            <div style="font-size:24px;margin-bottom:8px;">📊</div>
+                            <h4 style="font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin-bottom:8px;">Volume & Granularity</h4>
+                            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:var(--leading-relaxed);">SKU-level, location-level, day-level data adds up fast — a mid-size distributor can easily generate millions of transaction rows a year.</p>
+                        </div>
+                        <div style="background:var(--bg-primary);border:1px solid var(--border-light);border-radius:20px;padding:var(--space-6);box-shadow:var(--shadow-sm);transition:all 0.3s ease;" onmouseenter="this.style.borderColor='#2563eb';this.style.boxShadow='0 10px 25px rgba(37,99,235,0.1)';" onmouseleave="this.style.borderColor='';this.style.boxShadow='var(--shadow-sm)';">
+                            <div style="font-size:24px;margin-bottom:8px;">🤝</div>
+                            <h4 style="font-size:var(--text-lg);font-weight:700;color:var(--text-primary);margin-bottom:8px;">Cross-Functional Alignment</h4>
+                            <p style="color:var(--text-secondary);font-size:var(--text-sm);line-height:var(--leading-relaxed);">Procurement, warehouse ops, finance, and leadership all need the same numbers sliced differently. A DW ensures everyone relies on one clean, historized copy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: What a Supply Chain Data Warehouse Architecture Looks Like -->
+                <div class="animate-on-scroll" style="margin-bottom:var(--space-16);background:radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.06), transparent 50%), var(--bg-tertiary);border-radius:24px;padding:var(--space-10);border:1px solid var(--border-light);">
+                    <div style="margin-bottom:var(--space-8);text-align:center;">
+                        <span class="badge badge-purple">System Architecture</span>
+                        <h3 style="font-size:var(--text-2xl);font-weight:700;margin-top:var(--space-3);">What a Supply Chain Data Warehouse Architecture Looks Like</h3>
+                        <p style="color:var(--text-secondary);max-width:750px;margin:var(--space-2) auto 0;">A pragmatic architecture for mid-size to enterprise supply chain operations:</p>
+                    </div>
+
+                    <div style="margin-bottom:var(--space-8);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-lg);">
+                        <img src="../images/warehousing-in-supply-chain-management.webp" alt="Supply Chain Management Warehousing Architecture" style="width:100%;height:340px;object-fit:cover;" onerror="this.src='../images/bi_dashboard.png';">
+                    </div>
+
+                    <div class="grid-3" style="gap:var(--space-4);">
+                        <div style="background:var(--bg-primary);border-radius:16px;padding:var(--space-5);border:1px solid var(--border-light);">
+                            <span style="font-weight:800;color:#2563eb;font-size:12px;letter-spacing:1px;">STEP 1</span>
+                            <h5 style="font-size:16px;font-weight:700;margin:6px 0;">Source Systems</h5>
+                            <p style="font-size:13px;color:var(--text-secondary);line-height:1.5;">ERP (SAP, Oracle, Dynamics, NetSuite), WMS, carrier/3PL APIs, supplier portals, vendor flat files.</p>
+                        </div>
+                        <div style="background:var(--bg-primary);border-radius:16px;padding:var(--space-5);border:1px solid var(--border-light);">
+                            <span style="font-weight:800;color:#2563eb;font-size:12px;letter-spacing:1px;">STEP 2</span>
+                            <h5 style="font-size:16px;font-weight:700;margin:6px 0;">Ingestion / ETL Layer</h5>
+                            <p style="font-size:13px;color:var(--text-secondary);line-height:1.5;">Scheduled pipelines (Azure Data Factory, Fabric Data Pipelines) pulling and landing data on schedule.</p>
+                        </div>
+                        <div style="background:var(--bg-primary);border-radius:16px;padding:var(--space-5);border:1px solid var(--border-light);">
+                            <span style="font-weight:800;color:#2563eb;font-size:12px;letter-spacing:1px;">STEP 3</span>
+                            <h5 style="font-size:16px;font-weight:700;margin:6px 0;">Staging Layer</h5>
+                            <p style="font-size:13px;color:var(--text-secondary);line-height:1.5;">Raw or lightly cleaned data. Catches schema drift and bad data before polluting downstream tables.</p>
+                        </div>
+                        <div style="background:var(--bg-primary);border-radius:16px;padding:var(--space-5);border:1px solid var(--border-light);">
+                            <span style="font-weight:800;color:#7b2ff7;font-size:12px;letter-spacing:1px;">STEP 4</span>
+                            <h5 style="font-size:16px;font-weight:700;margin:6px 0;">Data Warehouse (Star Schema)</h5>
+                            <p style="font-size:13px;color:var(--text-secondary);line-height:1.5;">Fact tables (shipments, inventory snapshots, PO lines) & dimension tables (SKU, location, vendor, date).</p>
+                        </div>
+                        <div style="background:var(--bg-primary);border-radius:16px;padding:var(--space-5);border:1px solid var(--border-light);">
+                            <span style="font-weight:800;color:#7b2ff7;font-size:12px;letter-spacing:1px;">STEP 5</span>
+                            <h5 style="font-size:16px;font-weight:700;margin:6px 0;">Semantic Layer / Power BI</h5>
+                            <p style="font-size:13px;color:var(--text-secondary);line-height:1.5;">Curated model with clean DAX measures, consistent naming, and pre-resolved relationships.</p>
+                        </div>
+                        <div style="background:var(--bg-primary);border-radius:16px;padding:var(--space-5);border:1px solid var(--border-light);">
+                            <span style="font-weight:800;color:#00d4aa;font-size:12px;letter-spacing:1px;">STEP 6</span>
+                            <h5 style="font-size:16px;font-weight:700;margin:6px 0;">Reports & Dashboards</h5>
+                            <p style="font-size:13px;color:var(--text-secondary);line-height:1.5;">Role-based views: Executive summary, ops day-to-day, procurement view, and finance/cost view.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: The KPIs Worth Building Dashboards Around & Designing Power BI Dashboards -->
+                <div class="grid-2 animate-on-scroll" style="gap:var(--space-12);margin-bottom:var(--space-16);align-items:center;">
+                    <div>
+                        <span class="badge">Key Metrics</span>
+                        <h3 style="font-size:var(--text-2xl);font-weight:700;margin-top:var(--space-3);margin-bottom:var(--space-4);">The KPIs Worth Building Dashboards Around</h3>
+                        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;">
+                            <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text-secondary);"><span style="color:#2563eb;font-weight:700;">📈</span> <strong>Inventory turnover & days on hand</strong> — Are you carrying too much or too little?</li>
+                            <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text-secondary);"><span style="color:#2563eb;font-weight:700;">🚨</span> <strong>Stockout rate & fill rate</strong> — How often are you unable to fulfill demand?</li>
+                            <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text-secondary);"><span style="color:#2563eb;font-weight:700;">🎯</span> <strong>On-Time In-Full (OTIF) delivery rate</strong> — The #1 watched metric by operations leaders.</li>
+                            <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text-secondary);"><span style="color:#2563eb;font-weight:700;">⏱️</span> <strong>Supplier lead time variability</strong> — Tracking consistency, not just averages.</li>
+                            <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text-secondary);"><span style="color:#2563eb;font-weight:700;">🚚</span> <strong>Freight cost per unit shipped</strong> — Trended by lane, carrier, and shipping mode.</li>
+                            <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text-secondary);"><span style="color:#2563eb;font-weight:700;">🔮</span> <strong>Forecast accuracy (MAPE)</strong> — Variance tracking by SKU or category.</li>
+                            <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text-secondary);"><span style="color:#2563eb;font-weight:700;">💰</span> <strong>Working capital tied up in inventory</strong> — The finance-facing view of ops data.</li>
+                        </ul>
+                    </div>
+                    <div style="border-radius:20px;overflow:hidden;box-shadow:var(--shadow-xl);">
+                        <img src="../images/Dashboard2.webp" alt="Supply Chain Power BI Dashboard" style="width:100%;height:360px;object-fit:cover;" onerror="this.src='../images/bi_dashboard.png';">
+                    </div>
+                </div>
+
+                <!-- Section: Designing Dashboards & Avoid Common Pitfalls -->
+                <div class="grid-2 animate-on-scroll" style="gap:var(--space-12);margin-bottom:var(--space-16);align-items:center;">
+                    <div style="border-radius:20px;overflow:hidden;box-shadow:var(--shadow-xl);order:2;">
+                        <img src="../images/Bi_Dashboard.WEBP" alt="Power BI Supply Chain Analytics" style="width:100%;height:360px;object-fit:cover;" onerror="this.src='../images/bi_dashboard.png';">
+                    </div>
+                    <div style="order:1;">
+                        <span class="badge badge-purple">Best Practices</span>
+                        <h3 style="font-size:var(--text-2xl);font-weight:700;margin-top:var(--space-3);margin-bottom:var(--space-4);">Designing Dashboards People Actually Use</h3>
+                        <ul style="list-style:none;padding:0;margin:0 0 var(--space-6) 0;display:flex;flex-direction:column;gap:10px;">
+                            <li style="font-size:14px;color:var(--text-secondary);"><strong style="color:var(--text-primary);">Design by role:</strong> Executive summary vs. warehouse exception list.</li>
+                            <li style="font-size:14px;color:var(--text-secondary);"><strong style="color:var(--text-primary);">Exceptions over averages:</strong> Highlight the 12 SKUs likely to stock out this week.</li>
+                            <li style="font-size:14px;color:var(--text-secondary);"><strong style="color:var(--text-primary);">Honest refresh cadence:</strong> Label data timestamp clearly.</li>
+                            <li style="font-size:14px;color:var(--text-secondary);"><strong style="color:var(--text-primary);">Bookmarks & drillthrough:</strong> Keep report library lean & structured.</li>
+                            <li style="font-size:14px;color:var(--text-secondary);"><strong style="color:var(--text-primary);">Push alerts:</strong> Automate Teams/email alerts when KPIs cross thresholds.</li>
+                        </ul>
+
+                        <div style="background:rgba(239, 68, 68, 0.06);border-left:4px solid #ef4444;border-radius:8px;padding:var(--space-4) var(--space-5);">
+                            <h5 style="font-size:14px;font-weight:700;color:#dc2626;margin-bottom:4px;">⚠️ Common Pitfalls to Avoid:</h5>
+                            <p style="font-size:13px;color:var(--text-secondary);margin:0;line-height:1.5;">Building reports directly on source systems, messy unmodeled DAX, unmonitored pipelines, and static dashboards never revisited.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: How XProwess Approaches This & CTA -->
+                <div class="animate-on-scroll" style="background:linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);border-radius:24px;padding:var(--space-10);color:#ffffff;text-align:center;box-shadow:var(--shadow-xl);">
+                    <span style="background:rgba(255,255,255,0.2);color:#ffffff;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;display:inline-block;margin-bottom:var(--space-3);">How XProwess Approaches This</span>
+                    <h3 style="color:#ffffff;font-size:var(--text-2xl);font-weight:800;max-width:800px;margin:0 auto var(--space-4);">Turn Your Supply Chain Data into Your Greatest Competitive Advantage</h3>
+                    <p style="color:#e0f2fe;font-size:var(--text-base);line-height:var(--leading-relaxed);max-width:850px;margin:0 auto var(--space-8);">
+                        We build supply chain data warehouses and Power BI reporting layers end-to-end — from ETL pipeline design and dimensional modeling to dashboards operations teams open every morning. That includes automated pipeline monitoring and alerting so failed loads get caught before impacting your Monday morning reports.
+                    </p>
+                    <a href="contact.html" class="btn" style="background:#ffffff;color:#1d4ed8;font-weight:800;padding:14px 32px;border-radius:12px;font-size:16px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 20px rgba(0,0,0,0.15);transition:transform 0.3s ease;" onmouseenter="this.style.transform='translateY(-3px) scale(1.02)';" onmouseleave="this.style.transform='';">
+                        Get in Touch with XProwess <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
                 </div>
             </div>
         </section>
