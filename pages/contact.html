@@ -100,6 +100,7 @@
                     <input type="hidden" name="access_key" value="02fb2351-a971-4b47-b43a-3d19a50e5a1c">
                     <input type="hidden" name="subject" value="New Project Inquiry - Xprowess Website">
                     <input type="hidden" name="from_name" value="Xprowess Contact Form">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     <div class="grid-2" style="gap:var(--space-4);">
                         <div class="form-group"><label class="form-label" for="name">Full Name</label><input class="form-input" type="text" id="name" name="name" placeholder="John Doe" required></div>
                         <div class="form-group"><label class="form-label" for="email">Email Address</label><input class="form-input" type="email" id="email" name="email" placeholder="john@company.com" required></div>
@@ -151,7 +152,7 @@
                 if (submitBtn) submitBtn.disabled = true;
                 if (formStatus) {
                     formStatus.style.display = 'block';
-                    formStatus.style.color = 'var(--cyber-mint)';
+                    formStatus.style.color = '#3b82f6';
                     formStatus.innerText = 'Sending your message...';
                 }
 
@@ -162,19 +163,19 @@
                         body: formData
                     });
                     const result = await response.json();
+                    console.log('Web3Forms Result:', result);
                     if (result.success) {
                         formStatus.style.color = '#10B981';
                         formStatus.innerText = 'Thank you! Your message has been sent successfully. We will get back to you shortly.';
                         form.reset();
                     } else {
-                        formStatus.style.color = '#10B981';
-                        formStatus.innerText = 'Thank you! Your message was submitted successfully. We will contact you soon.';
-                        form.reset();
+                        formStatus.style.color = '#EF4444';
+                        formStatus.innerText = result.message || 'Form submission failed. Please activate your Web3Forms access key or try again.';
                     }
                 } catch (err) {
-                    formStatus.style.color = '#10B981';
-                    formStatus.innerText = 'Thank you! Your message has been received. We will contact you soon.';
-                    form.reset();
+                    console.error('Submission Error:', err);
+                    formStatus.style.color = '#EF4444';
+                    formStatus.innerText = 'Unable to send message. Please check your internet connection or email us directly at hello@xprowess.com';
                 } finally {
                     if (submitBtn) {
                         submitBtn.disabled = false;
